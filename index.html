@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Álbum Pokémon · Família</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0e1a;
+  --bg-card:#141a2e;
+  --bg-card-2:#1a2138;
+  --bg-elevated:#252d47;
+  --border:rgba(255,255,255,0.08);
+  --border-hover:rgba(255,255,255,0.18);
+  --text:#f2f4fa;
+  --text-mute:#8b93ad;
+  --text-dim:#5e6680;
+  --accent:#ffcb05;
+  --accent-red:#ee1515;
+  --accent-blue:#3b4cca;
+  --accent-green:#4caf50;
+  --gradient-electric:linear-gradient(135deg,#f9d423 0%,#ff4e50 100%);
+  --gradient-fire:linear-gradient(135deg,#ff512f 0%,#f09819 100%);
+  --gradient-water:linear-gradient(135deg,#2193b0 0%,#6dd5ed 100%);
+  --gradient-grass:linear-gradient(135deg,#11998e 0%,#38ef7d 100%);
+  --gradient-psychic:linear-gradient(135deg,#8e2de2 0%,#4a00e0 100%);
+  --gradient-metal:linear-gradient(135deg,#7b7b7b 0%,#c9c9c9 100%);
+  --gradient-fairy:linear-gradient(135deg,#ff6ec4 0%,#7873f5 100%);
+  --gradient-dark:linear-gradient(135deg,#232526 0%,#414345 100%);
+  --gradient-dragon:linear-gradient(135deg,#ff9a9e 0%,#fad0c4 100%);
+  --gradient-normal:linear-gradient(135deg,#bdc3c7 0%,#2c3e50 100%);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  line-height:1.5;
+}
+.app{max-width:1400px;margin:0 auto;padding:24px 32px 64px}
+
+/* Header */
+.header{display:flex;align-items:center;justify-content:space-between;margin-bottom:32px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+.brand{display:flex;align-items:center;gap:14px}
+.brand-logo{width:44px;height:44px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;position:relative;box-shadow:0 0 24px rgba(255,203,5,0.3)}
+.brand-logo::before{content:"";position:absolute;width:100%;height:4px;background:#0a0e1a;top:50%;transform:translateY(-50%)}
+.brand-logo::after{content:"";position:absolute;width:16px;height:16px;border-radius:50%;background:#0a0e1a;border:4px solid var(--accent);box-shadow:inset 0 0 0 2px #0a0e1a}
+.brand-text h1{font-size:20px;font-weight:700;letter-spacing:-0.02em}
+.brand-text p{font-size:13px;color:var(--text-mute);font-weight:500}
+.header-meta{font-size:12px;color:var(--text-dim);font-family:'JetBrains Mono',monospace;text-align:right}
+
+/* Stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:28px}
+.stat{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:18px 20px;position:relative;overflow:hidden}
+.stat::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--accent);opacity:0.6}
+.stat:nth-child(2)::before{background:var(--accent-blue)}
+.stat:nth-child(3)::before{background:#8e2de2}
+.stat:nth-child(4)::before{background:var(--accent-green)}
+.stat-lbl{font-size:11px;color:var(--text-mute);text-transform:uppercase;letter-spacing:0.08em;font-weight:600;margin-bottom:6px}
+.stat-val{font-size:28px;font-weight:700;letter-spacing:-0.02em}
+.stat-sub{font-size:12px;color:var(--text-dim);margin-top:2px}
+
+/* Tabs */
+.tabs{display:flex;gap:4px;margin-bottom:20px;background:var(--bg-card);padding:4px;border-radius:10px;border:1px solid var(--border);width:fit-content}
+.tab{padding:8px 18px;font-size:13px;font-weight:600;color:var(--text-mute);background:transparent;border:none;border-radius:6px;cursor:pointer;font-family:inherit;transition:all 0.15s}
+.tab:hover{color:var(--text)}
+.tab.active{background:var(--bg-elevated);color:var(--text)}
+
+/* Toolbar */
+.toolbar{display:flex;gap:10px;margin-bottom:24px;flex-wrap:wrap;align-items:center}
+.toolbar input[type=search],.toolbar select{
+  background:var(--bg-card);border:1px solid var(--border);color:var(--text);
+  padding:9px 14px;border-radius:8px;font-size:13px;font-family:inherit;font-weight:500;
+  transition:border-color 0.15s;
+}
+.toolbar input[type=search]{flex:1;min-width:220px}
+.toolbar input[type=search]:focus,.toolbar select:focus{outline:none;border-color:var(--accent)}
+.toolbar input[type=search]::placeholder{color:var(--text-dim)}
+.toolbar select{cursor:pointer}
+.btn{background:var(--accent);color:#0a0e1a;border:none;padding:9px 16px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;transition:all 0.15s}
+.btn:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(255,203,5,0.3)}
+.btn-ghost{background:transparent;color:var(--text);border:1px solid var(--border);font-weight:600}
+.btn-ghost:hover{background:var(--bg-card);box-shadow:none;transform:none;border-color:var(--border-hover)}
+
+/* Grid */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px}
+.card{
+  background:var(--bg-card);
+  border:1px solid var(--border);
+  border-radius:14px;
+  overflow:hidden;
+  transition:all 0.2s;
+  display:flex;
+  flex-direction:column;
+  cursor:pointer;
+}
+.card:hover{transform:translateY(-3px);border-color:var(--border-hover);box-shadow:0 12px 32px rgba(0,0,0,0.4)}
+.card-img-wrap{
+  position:relative;
+  aspect-ratio:245/342;
+  background:var(--bg-elevated);
+  overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+}
+.card-img{width:100%;height:100%;object-fit:cover;display:block}
+.card-placeholder{
+  width:100%;height:100%;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:20px;text-align:center;gap:8px;
+  color:#fff;
+}
+.card-placeholder.type-Elétrico{background:var(--gradient-electric)}
+.card-placeholder.type-Fogo{background:var(--gradient-fire)}
+.card-placeholder.type-Água{background:var(--gradient-water)}
+.card-placeholder.type-Grama{background:var(--gradient-grass)}
+.card-placeholder.type-Psíquico{background:var(--gradient-psychic)}
+.card-placeholder.type-Metálico{background:var(--gradient-metal)}
+.card-placeholder.type-Fada{background:var(--gradient-fairy)}
+.card-placeholder.type-Sombrio{background:var(--gradient-dark)}
+.card-placeholder.type-Dragão{background:var(--gradient-dragon)}
+.card-placeholder.type-Normal,.card-placeholder.type-Incolor{background:var(--gradient-normal)}
+.card-placeholder-name{font-size:18px;font-weight:700;text-shadow:0 2px 8px rgba(0,0,0,0.4)}
+.card-placeholder-hp{font-size:13px;opacity:0.9;font-weight:600}
+.card-placeholder-type{font-size:11px;opacity:0.8;letter-spacing:0.1em;text-transform:uppercase;margin-top:8px;padding:4px 10px;background:rgba(0,0,0,0.25);border-radius:10px}
+
+.card-qty-badge{
+  position:absolute;top:10px;right:10px;
+  background:rgba(0,0,0,0.75);backdrop-filter:blur(6px);
+  color:#fff;font-size:12px;font-weight:700;
+  padding:4px 10px;border-radius:20px;
+  border:1px solid rgba(255,255,255,0.15);
+}
+.card-rarity-badge{
+  position:absolute;top:10px;left:10px;
+  font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;
+  padding:4px 10px;border-radius:20px;
+  background:rgba(0,0,0,0.7);backdrop-filter:blur(6px);
+  border:1px solid rgba(255,255,255,0.15);
+}
+.card-rarity-badge.ultra{color:#ffcb05}
+.card-rarity-badge.rare{color:#a78bfa}
+.card-rarity-badge.common{color:#cbd5e0}
+
+.card-body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card-name{font-size:15px;font-weight:700;line-height:1.25;letter-spacing:-0.01em}
+.card-meta{display:flex;align-items:center;gap:8px;font-size:11px;color:var(--text-mute);font-family:'JetBrains Mono',monospace}
+.card-meta .dot{opacity:0.4}
+.card-tags{display:flex;gap:5px;flex-wrap:wrap;margin-top:2px}
+.card-tag{font-size:10px;padding:2px 7px;background:var(--bg-elevated);border-radius:4px;color:var(--text-mute);font-weight:600;letter-spacing:0.03em}
+.card-tag.lang-pt{background:rgba(76,175,80,0.15);color:#81c784}
+.card-tag.lang-en{background:rgba(59,76,202,0.15);color:#8b9cff}
+.card-footer{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:10px;border-top:1px solid var(--border)}
+.card-value{font-size:17px;font-weight:700;color:var(--accent)}
+.card-variant{font-size:11px;color:var(--text-dim);font-style:italic}
+
+/* Detail modal */
+.modal-bg{
+  position:fixed;inset:0;background:rgba(5,8,18,0.85);backdrop-filter:blur(8px);
+  display:none;align-items:center;justify-content:center;z-index:100;padding:40px 20px;
+  overflow-y:auto;
+}
+.modal-bg.open{display:flex}
+.modal{
+  background:var(--bg-card);border:1px solid var(--border);border-radius:16px;
+  max-width:820px;width:100%;max-height:90vh;overflow-y:auto;
+  display:grid;grid-template-columns:320px 1fr;gap:0;
+}
+.modal-img{background:var(--bg-elevated);padding:24px;display:flex;align-items:center;justify-content:center}
+.modal-img img,.modal-img .card-placeholder{border-radius:12px;width:100%;max-width:280px;aspect-ratio:245/342;object-fit:cover}
+.modal-body{padding:28px 32px}
+.modal-close{position:absolute;top:16px;right:20px;background:transparent;border:none;color:var(--text-mute);font-size:24px;cursor:pointer;width:32px;height:32px;border-radius:6px;display:flex;align-items:center;justify-content:center}
+.modal-close:hover{background:var(--bg-elevated);color:var(--text)}
+.modal-title{font-size:24px;font-weight:700;letter-spacing:-0.02em;margin-bottom:4px}
+.modal-subtitle{font-size:13px;color:var(--text-mute);font-family:'JetBrains Mono',monospace;margin-bottom:20px}
+.modal-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--border);font-size:13px}
+.modal-row:last-child{border-bottom:none}
+.modal-row-lbl{color:var(--text-mute);font-weight:500}
+.modal-row-val{font-weight:600}
+.modal-attacks{margin-top:20px;padding-top:20px;border-top:1px solid var(--border)}
+.modal-attack{background:var(--bg-elevated);border-radius:8px;padding:12px 14px;margin-bottom:8px}
+.modal-attack-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px}
+.modal-attack-name{font-weight:700;font-size:14px}
+.modal-attack-cost{font-size:11px;color:var(--text-mute);font-family:'JetBrains Mono',monospace}
+.modal-attack-dmg{font-size:15px;font-weight:700;color:var(--accent)}
+.modal-attack-text{font-size:12px;color:var(--text-mute);line-height:1.5}
+
+/* Empty state */
+.empty{padding:48px 24px;text-align:center;color:var(--text-mute);background:var(--bg-card);border:1px dashed var(--border);border-radius:12px}
+.empty h3{font-size:16px;font-weight:600;color:var(--text);margin-bottom:8px}
+.empty p{font-size:14px;max-width:480px;margin:0 auto}
+
+/* Loading */
+.loader{text-align:center;padding:60px;color:var(--text-mute);font-size:14px}
+
+/* Responsive */
+@media(max-width:720px){
+  .app{padding:16px}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .modal{grid-template-columns:1fr;max-width:420px}
+  .modal-img{padding:16px}
+  .header-meta{display:none}
+}
+
+/* Pokéball spinner */
+@keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+.spinner{width:32px;height:32px;margin:0 auto 12px;position:relative;animation:spin 1s linear infinite}
+.spinner::before{content:"";position:absolute;inset:0;border-radius:50%;background:linear-gradient(to bottom,var(--accent-red) 50%,#fff 50%)}
+.spinner::after{content:"";position:absolute;top:50%;left:50%;width:10px;height:10px;border-radius:50%;background:#0a0e1a;border:2px solid #0a0e1a;transform:translate(-50%,-50%);box-shadow:inset 0 0 0 2px #fff,0 0 0 2px #fff}
+</style>
+</head>
+<body>
+<div class="app">
+
+<header class="header">
+  <div class="brand">
+    <div class="brand-logo"></div>
+    <div class="brand-text">
+      <h1>Álbum Pokémon</h1>
+      <p id="owners">Coleção da família</p>
+    </div>
+  </div>
+  <div class="header-meta">
+    <div id="total-cards">—</div>
+    <div id="last-update">—</div>
+  </div>
+</header>
+
+<div class="stats" id="stats"></div>
+
+<div class="tabs">
+  <button class="tab active" data-tab="album">Álbum</button>
+  <button class="tab" data-tab="faltam">Faltam</button>
+  <button class="tab" data-tab="deck">Deck</button>
+</div>
+
+<div id="tab-album">
+  <div class="toolbar">
+    <input type="search" id="search" placeholder="Buscar por nome, número ou expansão..." />
+    <select id="f-rarity">
+      <option value="">Todas raridades</option>
+      <option value="ultra">Ultra / EX</option>
+      <option value="rare">Rara</option>
+      <option value="common">Comum</option>
+    </select>
+    <select id="f-lang">
+      <option value="">Todos idiomas</option>
+      <option value="pt">Português</option>
+      <option value="en">Inglês</option>
+    </select>
+    <select id="f-set">
+      <option value="">Todas expansões</option>
+    </select>
+    <select id="f-sort">
+      <option value="added">Ordem adicionada</option>
+      <option value="value-desc">Valor (maior)</option>
+      <option value="value-asc">Valor (menor)</option>
+      <option value="name">Nome (A-Z)</option>
+      <option value="number">Número</option>
+    </select>
+  </div>
+  <div class="grid" id="grid"></div>
+</div>
+
+<div id="tab-faltam" style="display:none">
+  <div class="empty">
+    <h3>Lista de faltantes</h3>
+    <p>Conforme você for adicionando mais cartas da mesma expansão, vou poder montar a lista do que falta para completar. Hoje o álbum tem cartas só de <strong>Mega Evolution</strong> (132 cartas no total).</p>
+  </div>
+</div>
+
+<div id="tab-deck" style="display:none">
+  <div class="empty">
+    <h3>Construtor de deck</h3>
+    <p>Quando tiver cartas suficientes, essa aba vai sugerir o melhor deck possível com o que vocês têm — priorizando sinergias de tipo, linhas evolutivas e combos óbvios.</p>
+  </div>
+</div>
+
+<!-- Modal de detalhe -->
+<div class="modal-bg" id="modal">
+  <div class="modal" style="position:relative">
+    <button class="modal-close" onclick="closeModal()">×</button>
+    <div class="modal-img" id="m-img"></div>
+    <div class="modal-body" id="m-body"></div>
+  </div>
+</div>
+
+</div>
+
+<script>
+let ALL = [];
+let META = {};
+
+async function loadData(){
+  try{
+    const res = await fetch('cartas.json');
+    const data = await res.json();
+    ALL = data.cards || [];
+    META = data.meta || {};
+    document.getElementById('owners').textContent = META.owners || 'Coleção da família';
+    document.getElementById('last-update').textContent = 'Atualizado: ' + (META.last_updated || '—');
+    populateSetFilter();
+    renderStats();
+    renderGrid();
+  }catch(e){
+    document.getElementById('grid').innerHTML = `<div class="empty" style="grid-column:1/-1"><h3>Erro ao carregar cartas.json</h3><p>Certifique-se de que o arquivo <code>cartas.json</code> está na mesma pasta que este HTML.</p></div>`;
+  }
+}
+
+function populateSetFilter(){
+  const sets = [...new Set(ALL.map(c => c.set).filter(Boolean))].sort();
+  const sel = document.getElementById('f-set');
+  sets.forEach(s => {
+    const opt = document.createElement('option');
+    opt.value = s; opt.textContent = s;
+    sel.appendChild(opt);
+  });
+}
+
+function fmtBRL(v){
+  return 'R$ ' + (Number(v)||0).toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2});
+}
+
+function renderStats(){
+  const totalQty = ALL.reduce((s,c) => s + (c.quantity||1), 0);
+  const unique = ALL.length;
+  const ultras = ALL.filter(c => c.rarity === 'ultra').reduce((s,c) => s + (c.quantity||1), 0);
+  const totalVal = ALL.reduce((s,c) => s + ((c.value_brl||0) * (c.quantity||1)), 0);
+  const avgVal = unique > 0 ? totalVal / totalQty : 0;
+
+  const statsHtml = [
+    { lbl:'Total de cartas', val: totalQty, sub: unique + ' únicas' },
+    { lbl:'EX / ultra raras', val: ultras, sub: Math.round((ultras/totalQty)*100||0) + '% do total' },
+    { lbl:'Valor total', val: fmtBRL(totalVal), sub: 'Média ' + fmtBRL(avgVal) },
+    { lbl:'Expansões', val: new Set(ALL.map(c=>c.set)).size, sub: 'diferentes' },
+  ].map(s => `
+    <div class="stat">
+      <div class="stat-lbl">${s.lbl}</div>
+      <div class="stat-val">${s.val}</div>
+      <div class="stat-sub">${s.sub}</div>
+    </div>
+  `).join('');
+
+  document.getElementById('stats').innerHTML = statsHtml;
+  document.getElementById('total-cards').textContent = totalQty + ' cartas · ' + unique + ' únicas';
+}
+
+function rarityLabel(r){
+  return r === 'ultra' ? 'Ultra' : r === 'rare' ? 'Rara' : 'Comum';
+}
+
+function cardImageHtml(c){
+  if (c.img && c.img.length > 0){
+    return `<img class="card-img" src="${c.img}" alt="${c.name}" loading="lazy" onerror="this.outerHTML = placeholderHtml(${JSON.stringify(JSON.stringify(c))})" />`;
+  }
+  return placeholderHtml(JSON.stringify(c));
+}
+
+function placeholderHtml(cardJson){
+  const c = typeof cardJson === 'string' ? JSON.parse(cardJson) : cardJson;
+  const type = c.type || 'Normal';
+  return `<div class="card-placeholder type-${type}">
+    <div class="card-placeholder-name">${c.name}</div>
+    ${c.hp ? `<div class="card-placeholder-hp">${c.hp} HP</div>` : ''}
+    <div class="card-placeholder-type">${type}</div>
+  </div>`;
+}
+
+function renderGrid(){
+  const q = document.getElementById('search').value.toLowerCase();
+  const fr = document.getElementById('f-rarity').value;
+  const fl = document.getElementById('f-lang').value;
+  const fs = document.getElementById('f-set').value;
+  const sort = document.getElementById('f-sort').value;
+
+  let list = ALL.filter(c => {
+    if (q){
+      const h = (c.name + ' ' + (c.number||'') + ' ' + (c.set||'')).toLowerCase();
+      if (!h.includes(q)) return false;
+    }
+    if (fr && c.rarity !== fr) return false;
+    if (fl && c.lang !== fl) return false;
+    if (fs && c.set !== fs) return false;
+    return true;
+  });
+
+  if (sort === 'value-desc') list.sort((a,b) => (b.value_brl||0) - (a.value_brl||0));
+  else if (sort === 'value-asc') list.sort((a,b) => (a.value_brl||0) - (b.value_brl||0));
+  else if (sort === 'name') list.sort((a,b) => a.name.localeCompare(b.name));
+  else if (sort === 'number') list.sort((a,b) => (a.number||'').localeCompare(b.number||''));
+
+  const grid = document.getElementById('grid');
+  if (list.length === 0){
+    grid.innerHTML = `<div class="empty" style="grid-column:1/-1"><h3>Nenhuma carta encontrada</h3><p>Tente ajustar os filtros.</p></div>`;
+    return;
+  }
+
+  grid.innerHTML = list.map(c => `
+    <div class="card" onclick='openModal(${JSON.stringify(c.id)})'>
+      <div class="card-img-wrap">
+        ${cardImageHtml(c)}
+        <div class="card-rarity-badge ${c.rarity}">${rarityLabel(c.rarity)}</div>
+        ${(c.quantity||1) > 1 ? `<div class="card-qty-badge">×${c.quantity}</div>` : `<div class="card-qty-badge">×1</div>`}
+      </div>
+      <div class="card-body">
+        <div class="card-name">${c.name}</div>
+        <div class="card-meta">
+          <span>${c.number || '—'}</span>
+          <span class="dot">·</span>
+          <span>${c.set || '—'}</span>
+        </div>
+        <div class="card-tags">
+          <span class="card-tag lang-${c.lang}">${c.lang === 'pt' ? 'Português' : 'Inglês'}</span>
+          ${c.type ? `<span class="card-tag">${c.type}</span>` : ''}
+          ${c.hp ? `<span class="card-tag">${c.hp} HP</span>` : ''}
+        </div>
+        <div class="card-footer">
+          <div class="card-value">${fmtBRL(c.value_brl)}</div>
+          ${c.variant && c.variant !== 'Padrão' ? `<div class="card-variant">${c.variant}</div>` : ''}
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function openModal(id){
+  const c = ALL.find(x => x.id === id);
+  if (!c) return;
+
+  const img = document.getElementById('m-img');
+  if (c.img){
+    img.innerHTML = `<img src="${c.img}" alt="${c.name}" onerror="this.outerHTML = placeholderHtml(${JSON.stringify(JSON.stringify(c))})" />`;
+  } else {
+    img.innerHTML = placeholderHtml(c);
+  }
+
+  const rows = [
+    ['Número', c.number || '—'],
+    ['Expansão', c.set || '—'],
+    ['Raridade', rarityLabel(c.rarity)],
+    ['Tipo', c.type || '—'],
+    ['HP', c.hp || '—'],
+    ['Estágio', c.stage || '—'],
+    c.evolves_from ? ['Evolui de', c.evolves_from] : null,
+    ['Idioma', c.lang === 'pt' ? 'Português' : 'Inglês'],
+    ['Quantidade', '×' + (c.quantity || 1)],
+    ['Variante', c.variant || 'Padrão'],
+    ['Valor estimado', fmtBRL(c.value_brl)],
+  ].filter(Boolean);
+
+  let attacksHtml = '';
+  if (c.attacks && c.attacks.length){
+    attacksHtml = `<div class="modal-attacks">
+      <div style="font-size:11px;color:var(--text-mute);letter-spacing:0.08em;text-transform:uppercase;font-weight:700;margin-bottom:10px">Ataques</div>
+      ${c.attacks.map(a => `
+        <div class="modal-attack">
+          <div class="modal-attack-head">
+            <div>
+              <div class="modal-attack-name">${a.name}</div>
+              <div class="modal-attack-cost">Custo: ${a.cost}</div>
+            </div>
+            <div class="modal-attack-dmg">${a.damage}</div>
+          </div>
+          ${a.text ? `<div class="modal-attack-text">${a.text}</div>` : ''}
+        </div>
+      `).join('')}
+    </div>`;
+  }
+
+  document.getElementById('m-body').innerHTML = `
+    <div class="modal-title">${c.name}</div>
+    <div class="modal-subtitle">${c.number} · ${c.set}</div>
+    ${rows.map(([l,v]) => `<div class="modal-row"><span class="modal-row-lbl">${l}</span><span class="modal-row-val">${v}</span></div>`).join('')}
+    ${c.notes ? `<div style="margin-top:16px;padding:12px 14px;background:var(--bg-elevated);border-radius:8px;font-size:13px;font-style:italic;color:var(--text-mute)">${c.notes}</div>` : ''}
+    ${attacksHtml}
+  `;
+
+  document.getElementById('modal').classList.add('open');
+}
+
+function closeModal(){
+  document.getElementById('modal').classList.remove('open');
+}
+
+// Tabs
+document.querySelectorAll('.tab').forEach(t => {
+  t.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(x => x.classList.remove('active'));
+    t.classList.add('active');
+    ['album','faltam','deck'].forEach(n => {
+      document.getElementById('tab-'+n).style.display = n === t.dataset.tab ? '' : 'none';
+    });
+  });
+});
+
+// Filters
+['search','f-rarity','f-lang','f-set','f-sort'].forEach(id => {
+  document.getElementById(id).addEventListener('input', renderGrid);
+  document.getElementById(id).addEventListener('change', renderGrid);
+});
+
+// Modal close on bg click
+document.getElementById('modal').addEventListener('click', e => {
+  if (e.target.id === 'modal') closeModal();
+});
+
+// ESC fecha modal
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeModal();
+});
+
+loadData();
+</script>
+</body>
+</html>

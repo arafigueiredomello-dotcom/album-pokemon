@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "version": 1,
+    "last_updated": "2026-04-16",
+    "description": "Coleção de cartas Pokémon da família",
+    "owners": "Família"
+  },
+  "cards": [
+    {
+      "id": "me-050-mmanectric-pt-01",
+      "name": "Mega Manectric ex",
+      "number": "050/132",
+      "set": "Mega Evolution",
+      "set_code": "ME01",
+      "rarity": "ultra",
+      "type": "Elétrico",
+      "hp": 330,
+      "stage": "Mega Evolução",
+      "evolves_from": "Manectric",
+      "lang": "pt",
+      "value_brl": 45,
+      "quantity": 1,
+      "variant": "Padrão",
+      "notes": "",
+      "img": "",
+      "attacks": [
+        { "name": "Raio de Clarão", "cost": "LLL", "damage": "120", "text": "Durante o próximo turno do oponente, previna todo o dano causado por ataques de Pokémon Básicos." },
+        { "name": "Detonação Desenfreada", "cost": "LLL", "damage": "200+", "text": "Descarte todas as Energias. +130 de dano." }
+      ]
+    },
+    {
+      "id": "me-050-mmanectric-pt-02",
+      "name": "Mega Manectric ex",
+      "number": "050/132",
+      "set": "Mega Evolution",
+      "set_code": "ME01",
+      "rarity": "ultra",
+      "type": "Elétrico",
+      "hp": 330,
+      "stage": "Mega Evolução",
+      "evolves_from": "Manectric",
+      "lang": "pt",
+      "value_brl": 65,
+      "quantity": 1,
+      "variant": "Prize Pack (selo de torneio)",
+      "notes": "Versão especial com selo play!pokemon — menos comum que a padrão",
+      "img": "",
+      "attacks": [
+        { "name": "Raio de Clarão", "cost": "LLL", "damage": "120", "text": "Durante o próximo turno do oponente, previna todo o dano causado por ataques de Pokémon Básicos." },
+        { "name": "Detonação Desenfreada", "cost": "LLL", "damage": "200+", "text": "Descarte todas as Energias. +130 de dano." }
+      ]
+    },
+    {
+      "id": "me-094-mmawile-pt-01",
+      "name": "Mega Mawile ex",
+      "number": "094/132",
+      "set": "Mega Evolution",
+      "set_code": "ME01",
+      "rarity": "ultra",
+      "type": "Metálico",
+      "hp": 270,
+      "stage": "Mega Evolução",
+      "evolves_from": "Mawile",
+      "lang": "pt",
+      "value_brl": 30,
+      "quantity": 1,
+      "variant": "Padrão",
+      "notes": "",
+      "img": "",
+      "attacks": [
+        { "name": "Engolidona", "cost": "MM", "damage": "80x", "text": "80 de dano para cada carta de Prêmio que você pegou." },
+        { "name": "Dentadona", "cost": "MMM", "damage": "260", "text": "Se o Pokémon Ativo do oponente tiver algum contador de dano, o dano base será 130." }
+      ]
+    },
+    {
+      "id": "me-036-mabomasnow-pt-01",
+      "name": "Mega Abomasnow ex",
+      "number": "036/132",
+      "set": "Mega Evolution",
+      "set_code": "ME01",
+      "rarity": "ultra",
+      "type": "Água",
+      "hp": 350,
+      "stage": "Mega Evolução",
+      "evolves_from": "Abomasnow",
+      "lang": "pt",
+      "value_brl": 40,
+      "quantity": 1,
+      "variant": "Padrão",
+      "notes": "",
+      "img": "",
+      "attacks": [
+        { "name": "Paulada Avalanche", "cost": "WW", "damage": "100x", "text": "Descarte as 6 cartas do topo do seu baralho. Este ataque causa 100 de dano para cada carta de Energia Básica descartada desta forma." },
+        { "name": "Barreira Congelada", "cost": "WWW", "damage": "200", "text": "Durante o próximo turno do oponente, este Pokémon recebe 30 de dano a menos de ataques (depois de aplicar Fraqueza e Resistência)." }
+      ]
+    }
+  ],
+  "wishlist": []
+}
