@@ -1,6 +1,6 @@
 {
   "meta": {
-    "version": 1,
+    "version": 2,
     "last_updated": "2026-04-16",
     "description": "Coleção de cartas Pokémon da família",
     "owners": "Família"
@@ -22,7 +22,7 @@
       "quantity": 1,
       "variant": "Padrão",
       "notes": "",
-      "img": "",
+      "img": "https://images.pokemontcg.io/me1/50_hires.png",
       "attacks": [
         { "name": "Raio de Clarão", "cost": "LLL", "damage": "120", "text": "Durante o próximo turno do oponente, previna todo o dano causado por ataques de Pokémon Básicos." },
         { "name": "Detonação Desenfreada", "cost": "LLL", "damage": "200+", "text": "Descarte todas as Energias. +130 de dano." }
@@ -44,7 +44,7 @@
       "quantity": 1,
       "variant": "Prize Pack (selo de torneio)",
       "notes": "Versão especial com selo play!pokemon — menos comum que a padrão",
-      "img": "",
+      "img": "https://images.pokemontcg.io/me1/50_hires.png",
       "attacks": [
         { "name": "Raio de Clarão", "cost": "LLL", "damage": "120", "text": "Durante o próximo turno do oponente, previna todo o dano causado por ataques de Pokémon Básicos." },
         { "name": "Detonação Desenfreada", "cost": "LLL", "damage": "200+", "text": "Descarte todas as Energias. +130 de dano." }
@@ -66,7 +66,7 @@
       "quantity": 1,
       "variant": "Padrão",
       "notes": "",
-      "img": "",
+      "img": "https://images.pokemontcg.io/me1/94_hires.png",
       "attacks": [
         { "name": "Engolidona", "cost": "MM", "damage": "80x", "text": "80 de dano para cada carta de Prêmio que você pegou." },
         { "name": "Dentadona", "cost": "MMM", "damage": "260", "text": "Se o Pokémon Ativo do oponente tiver algum contador de dano, o dano base será 130." }
@@ -88,7 +88,7 @@
       "quantity": 1,
       "variant": "Padrão",
       "notes": "",
-      "img": "",
+      "img": "https://images.pokemontcg.io/me1/36_hires.png",
       "attacks": [
         { "name": "Paulada Avalanche", "cost": "WW", "damage": "100x", "text": "Descarte as 6 cartas do topo do seu baralho. Este ataque causa 100 de dano para cada carta de Energia Básica descartada desta forma." },
         { "name": "Barreira Congelada", "cost": "WWW", "damage": "200", "text": "Durante o próximo turno do oponente, este Pokémon recebe 30 de dano a menos de ataques (depois de aplicar Fraqueza e Resistência)." }
