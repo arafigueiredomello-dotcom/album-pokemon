@@ -356,7 +356,7 @@ function rarityLabel(r){
 
 function cardImageHtml(c){
   if (c.img && c.img.length > 0){
-    return `<img class="card-img" src="${c.img}" alt="${c.name}" loading="lazy" referrerpolicy="no-referrer" crossorigin="anonymous" onerror="this.outerHTML = placeholderHtml(${JSON.stringify(JSON.stringify(c))})" />`;
+    return `<img class="card-img" src="${c.img}" alt="${c.name}" loading="lazy" onerror="this.outerHTML = placeholderHtml(${JSON.stringify(JSON.stringify(c))})" />`;
   }
   return placeholderHtml(JSON.stringify(c));
 }
@@ -434,7 +434,7 @@ function openModal(id){
 
   const img = document.getElementById('m-img');
   if (c.img){
-    img.innerHTML = `<img src="${c.img}" alt="${c.name}" referrerpolicy="no-referrer" crossorigin="anonymous" onerror="this.outerHTML = placeholderHtml(${JSON.stringify(JSON.stringify(c))})" />`;
+    img.innerHTML = `<img src="${c.img}" alt="${c.name}" onerror="this.outerHTML = placeholderHtml(${JSON.stringify(JSON.stringify(c))})" />`;
   } else {
     img.innerHTML = placeholderHtml(c);
   }
@@ -447,7 +447,7 @@ function openModal(id){
     ['HP', c.hp || '—'],
     ['Estágio', c.stage || '—'],
     c.evolves_from ? ['Evolui de', c.evolves_from] : null,
-    ['Idioma', c.lang === 'pt' ? 'Português' : 'Inglês'],
+    ['Idioma', ({pt:'Português',en:'Inglês',ja:'Japonês',ko:'Coreano',fr:'Francês',de:'Alemão'})[c.lang] || c.lang || '—'],
     ['Quantidade', '×' + (c.quantity || 1)],
     ['Variante', c.variant || 'Padrão'],
     ['Valor estimado', fmtBRL(c.value_brl)],
