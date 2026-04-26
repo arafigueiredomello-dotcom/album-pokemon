@@ -356,7 +356,7 @@ function rarityLabel(r){
 
 function cardImageHtml(c){
   if (c.img && c.img.length > 0){
-    return `<img class="card-img" src="${c.img}" alt="${c.name}" loading="lazy" onerror="this.outerHTML = placeholderHtml(${JSON.stringify(JSON.stringify(c))})" />`;
+    return `<img class="card-img" src="${c.img}" alt="${c.name}" loading="lazy" referrerpolicy="no-referrer" crossorigin="anonymous" onerror="this.outerHTML = placeholderHtml(${JSON.stringify(JSON.stringify(c))})" />`;
   }
   return placeholderHtml(JSON.stringify(c));
 }
@@ -434,7 +434,7 @@ function openModal(id){
 
   const img = document.getElementById('m-img');
   if (c.img){
-    img.innerHTML = `<img src="${c.img}" alt="${c.name}" onerror="this.outerHTML = placeholderHtml(${JSON.stringify(JSON.stringify(c))})" />`;
+    img.innerHTML = `<img src="${c.img}" alt="${c.name}" referrerpolicy="no-referrer" crossorigin="anonymous" onerror="this.outerHTML = placeholderHtml(${JSON.stringify(JSON.stringify(c))})" />`;
   } else {
     img.innerHTML = placeholderHtml(c);
   }
