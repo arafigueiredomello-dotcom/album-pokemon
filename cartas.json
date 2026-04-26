@@ -46,7 +46,7 @@
       "quantity": 1,
       "variant": "Padrão",
       "notes": "Treinador (Apoiador). Carta da Classic Collection das Celebrações. Valor estimado.",
-      "img": "https://images.pokemontcg.io/cel25c/24_hires.png",
+      "img": "https://images.pokemontcg.io/cel25/24_hires.png",
       "attacks": []
     },
     {
@@ -432,7 +432,7 @@
       "quantity": 1,
       "variant": "Padrão",
       "notes": "",
-      "img": "https://images.pokemontcg.io/ros/8_hires.png",
+      "img": "https://images.pokemontcg.io/xy6/8_hires.png",
       "attacks": [
         {
           "name": "Asa",
@@ -463,7 +463,7 @@
       "quantity": 1,
       "variant": "Padrão",
       "notes": "",
-      "img": "https://images.pokemontcg.io/ros/17_hires.png",
+      "img": "https://images.pokemontcg.io/xy6/17_hires.png",
       "attacks": [
         {
           "name": "Suspiro Refrescante",
@@ -784,7 +784,7 @@
       "quantity": 3,
       "variant": "Padrão",
       "notes": "Família tem 3 cópias iguais (2 numa página, 1 em outra).",
-      "img": "https://images.pokemontcg.io/ces/8_hires.png",
+      "img": "https://images.pokemontcg.io/sm7/8_hires.png",
       "attacks": [
         {
           "name": "Estalo",
@@ -1471,7 +1471,7 @@
       "quantity": 1,
       "variant": "Trainer Gallery",
       "notes": "TG da Lost Origin é o palpite mais provável — você viu marca D, então pode ser Trainer Gallery de outra era.",
-      "img": "https://images.pokemontcg.io/swsh11tg/15_hires.png",
+      "img": "https://images.pokemontcg.io/swsh11tg/TG15_hires.png",
       "attacks": [
         {
           "name": "Centiferno G-Max",
@@ -1497,7 +1497,7 @@
       "quantity": 1,
       "variant": "Trainer Gallery",
       "notes": "Mesmo set/situação do Centiskorch.",
-      "img": "https://images.pokemontcg.io/swsh11tg/21_hires.png",
+      "img": "https://images.pokemontcg.io/swsh11tg/TG21_hires.png",
       "attacks": [
         {
           "name": "Propulsão de Tempestade",
