@@ -46,7 +46,7 @@
       "quantity": 1,
       "variant": "Padrão",
       "notes": "Treinador (Apoiador). Carta da Classic Collection das Celebrações. Valor estimado.",
-      "img": "https://images.pokemontcg.io/cel25/24_hires.png",
+      "img": "https://images.pokemontcg.io/cel25c/24_hires.png",
       "attacks": []
     },
     {
@@ -62,7 +62,7 @@
       "quantity": 1,
       "variant": "Holo",
       "notes": "Energia básica holográfica. Valor estimado.",
-      "img": "https://images.pokemontcg.io/sve/21_hires.png",
+      "img": "img/energia-psiquica.jpg",
       "attacks": []
     },
     {
@@ -104,7 +104,7 @@
       "quantity": 1,
       "variant": "Padrão",
       "notes": "Energia básica. Valor estimado.",
-      "img": "https://images.pokemontcg.io/sve/22_hires.png",
+      "img": "img/energia-lutador.jpg",
       "attacks": []
     },
     {
@@ -120,7 +120,7 @@
       "quantity": 1,
       "variant": "Padrão",
       "notes": "© 2017. Set específico não identificado (possível Generations RC, ou XY/Sun&Moon Trainer Kit). Valor estimado.",
-      "img": "",
+      "img": "img/energia-fada.jpg",
       "attacks": []
     },
     {
@@ -260,7 +260,7 @@
       "quantity": 1,
       "variant": "Padrão",
       "notes": "Carta coreana. URL pendente — testar com TCGdex.",
-      "img": "",
+      "img": "img/dracozolt-v-ko.jpg",
       "attacks": []
     },
     {
@@ -432,7 +432,7 @@
       "quantity": 1,
       "variant": "Padrão",
       "notes": "",
-      "img": "https://images.pokemontcg.io/xy6/8_hires.png",
+      "img": "https://images.pokemontcg.io/ros/8_hires.png",
       "attacks": [
         {
           "name": "Asa",
@@ -463,7 +463,7 @@
       "quantity": 1,
       "variant": "Padrão",
       "notes": "",
-      "img": "https://images.pokemontcg.io/xy6/17_hires.png",
+      "img": "https://images.pokemontcg.io/ros/17_hires.png",
       "attacks": [
         {
           "name": "Suspiro Refrescante",
@@ -784,7 +784,7 @@
       "quantity": 3,
       "variant": "Padrão",
       "notes": "Família tem 3 cópias iguais (2 numa página, 1 em outra).",
-      "img": "https://images.pokemontcg.io/sm7/8_hires.png",
+      "img": "https://images.pokemontcg.io/ces/8_hires.png",
       "attacks": [
         {
           "name": "Estalo",
@@ -848,7 +848,7 @@
       "quantity": 1,
       "variant": "Padrão",
       "notes": "© 2011. Set específico não confirmado (provável Call of Legends ou HGSS Triumphant). Poder Pokémon Queimador, ataque Destruição Explosiva 70.",
-      "img": "",
+      "img": "img/typhlosion.jpg",
       "attacks": [
         {
           "name": "Destruição Explosiva",
@@ -1103,7 +1103,7 @@
       "quantity": 1,
       "variant": "ACE SPEC",
       "notes": "Item Treinador (Objet Dresseur) ACE SPEC. Carta francesa. URL pendente — testar com TCGdex.",
-      "img": "",
+      "img": "img/hyper-arome-fr.jpg",
       "attacks": []
     },
     {
@@ -1119,7 +1119,7 @@
       "quantity": 1,
       "variant": "ACE SPEC",
       "notes": "ACE SPEC japonês. URL pendente — testar com TCGdex.",
-      "img": "",
+      "img": "img/hope-amulet-ja.jpg",
       "attacks": []
     },
     {
@@ -1135,7 +1135,7 @@
       "quantity": 1,
       "variant": "ACE SPEC",
       "notes": "Outil Pokémon ACE SPEC. Carta francesa. URL pendente — testar com TCGdex.",
-      "img": "",
+      "img": "img/bombe-deluxe-fr.jpg",
       "attacks": []
     },
     {
@@ -1235,7 +1235,7 @@
       "quantity": 1,
       "variant": "Padrão",
       "notes": "Set Black Bolt — set_code do pokemontcg.io desconhecido. Imagem deixada vazia, vai mostrar placeholder.",
-      "img": "",
+      "img": "img/elgyem.jpg",
       "attacks": [
         {
           "name": "Deslocamento Discreto",
@@ -1323,7 +1323,7 @@
       "quantity": 1,
       "variant": "Padrão",
       "notes": "Carta japonesa. URL pendente — testar com TCGdex.",
-      "img": "",
+      "img": "img/iron-hands-ex-ja.jpg",
       "attacks": [
         {
           "name": "アームプレス (Arm Press)",
@@ -1355,7 +1355,7 @@
       "quantity": 1,
       "variant": "Padrão",
       "notes": "Carta promo francesa. Mantido o nome original em francês. URL pendente — testar com TCGdex.",
-      "img": "",
+      "img": "img/tomberro-ex-fr.jpg",
       "attacks": [
         {
           "name": "Croc Horrifiant",
@@ -1471,7 +1471,7 @@
       "quantity": 1,
       "variant": "Trainer Gallery",
       "notes": "TG da Lost Origin é o palpite mais provável — você viu marca D, então pode ser Trainer Gallery de outra era.",
-      "img": "https://images.pokemontcg.io/swsh11tg/TG15_hires.png",
+      "img": "https://images.pokemontcg.io/swsh11tg/15_hires.png",
       "attacks": [
         {
           "name": "Centiferno G-Max",
@@ -1497,7 +1497,7 @@
       "quantity": 1,
       "variant": "Trainer Gallery",
       "notes": "Mesmo set/situação do Centiskorch.",
-      "img": "https://images.pokemontcg.io/swsh11tg/TG21_hires.png",
+      "img": "https://images.pokemontcg.io/swsh11tg/21_hires.png",
       "attacks": [
         {
           "name": "Propulsão de Tempestade",
@@ -1529,7 +1529,7 @@
       "quantity": 1,
       "variant": "Padrão",
       "notes": "Carta alemã. URL pendente — testar com TCGdex.",
-      "img": "",
+      "img": "img/ur-dialga-vstar-de.jpg",
       "attacks": [
         {
           "name": "Metallexplosion",
@@ -1561,7 +1561,7 @@
       "quantity": 1,
       "variant": "RRR",
       "notes": "Carta japonesa. URL pendente — testar com TCGdex.",
-      "img": "",
+      "img": "img/drapion-vstar-ja.jpg",
       "attacks": [
         {
           "name": "ビッグバンアーム (Big Bang Arm)",
@@ -1700,7 +1700,7 @@
       "quantity": 1,
       "variant": "Special Illustration Rare",
       "notes": "Habilidade Sinal Metálico. Set Black Bolt — set_code do pokemontcg.io desconhecido.",
-      "img": "",
+      "img": "img/genesect-ex.jpg",
       "attacks": [
         {
           "name": "Carga Protetora",
@@ -1725,7 +1725,7 @@
       "quantity": 1,
       "variant": "Promo (borda dourada)",
       "notes": "Carta com borda dourada — promo de box específica não identificada. Habilidade Turbo Animado.",
-      "img": "",
+      "img": "img/oricorio-ex-promo.jpg",
       "attacks": [
         {
           "name": "Asa de Fogo",
@@ -1859,7 +1859,7 @@
       "quantity": 1,
       "variant": "Padrão",
       "notes": "Set Black Bolt — set_code do pokemontcg.io desconhecido.",
-      "img": "",
+      "img": "img/excadrill-ex.jpg",
       "attacks": [
         {
           "name": "Broca Pervasiva",
@@ -2169,7 +2169,7 @@
       "quantity": 1,
       "variant": "Promo",
       "notes": "Carta japonesa. URL pendente — testar com TCGdex.",
-      "img": "",
+      "img": "img/mega-charizard-x-ex-ja.jpg",
       "attacks": [
         {
           "name": "インフェルノX (Inferno X)",
@@ -2285,7 +2285,7 @@
       "quantity": 1,
       "variant": "Tera Crystal (Promo)",
       "notes": "",
-      "img": "https://images.pokemontcg.io/svp/175_hires.png",
+      "img": "img/espeon-ex-svp.jpg",
       "attacks": [
         {
           "name": "Intimidar",
