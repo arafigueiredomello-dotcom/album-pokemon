@@ -8,11 +8,11 @@
   },
   "cards": [
     {
-      "id": "xy10-24-pyroar-pt-01",
+      "id": "xy11-24-pyroar-pt-01",
       "name": "Pyroar TURBO",
-      "number": "024/124",
-      "set": "Destinos Colidentes (XY Fates Collide)",
-      "set_code": "XY10",
+      "number": "024/114",
+      "set": "Turbocolisão (XY Steam Siege)",
+      "set_code": "XY11",
       "rarity": "rare",
       "type": "Fogo",
       "hp": 160,
@@ -22,8 +22,8 @@
       "value_brl": 25,
       "quantity": 1,
       "variant": "Padrão",
-      "notes": "Carta TURBO (BREAK). Valor estimado.",
-      "img": "https://images.pokemontcg.io/xy10/24_hires.png",
+      "notes": "Carta TURBO (BREAK). Set é XY11 Steam Siege (114 cartas). Valor estimado.",
+      "img": "https://images.pokemontcg.io/xy11/24_hires.png",
       "attacks": [
         {
           "name": "Colisão do Imperador",
@@ -66,11 +66,11 @@
       "attacks": []
     },
     {
-      "id": "xy10-82-xerneas-pt-01",
+      "id": "xy11-82-xerneas-pt-01",
       "name": "Xerneas TURBO",
-      "number": "082/124",
-      "set": "Destinos Colidentes (XY Fates Collide)",
-      "set_code": "XY10",
+      "number": "082/114",
+      "set": "Turbocolisão (XY Steam Siege)",
+      "set_code": "XY11",
       "rarity": "rare",
       "type": "Fada",
       "hp": 150,
@@ -80,8 +80,8 @@
       "value_brl": 25,
       "quantity": 1,
       "variant": "Padrão",
-      "notes": "Carta TURBO (BREAK). Número parcialmente legível na foto, confirmar. Valor estimado.",
-      "img": "https://images.pokemontcg.io/xy10/82_hires.png",
+      "notes": "Carta TURBO (BREAK). Set XY11 Steam Siege confirmado. Valor estimado.",
+      "img": "https://images.pokemontcg.io/xy11/82_hires.png",
       "attacks": [
         {
           "name": "Fluxo de Vida",
@@ -221,21 +221,21 @@
       ]
     },
     {
-      "id": "swsh9-honchkrow-v-pt-01",
+      "id": "swsh9-151-honchkrow-v-pt-01",
       "name": "Honchkrow V",
-      "number": "?/172",
-      "set": "Estrelas Brilhantes (Brilliant Stars) — provável",
+      "number": "151/172",
+      "set": "Estrelas Brilhantes (Brilliant Stars)",
       "set_code": "BRS",
       "rarity": "ultra",
       "type": "Sombrio",
       "hp": 200,
       "stage": "Básico",
       "lang": "pt",
-      "value_brl": 20,
+      "value_brl": 30,
       "quantity": 1,
       "variant": "Padrão",
-      "notes": "Habilidade Bolsos do Chefão, ataque Sombra Temível 130. Número ilegível na foto — confirmar antes de usar URL.",
-      "img": "",
+      "notes": "Habilidade Bolsos do Chefão.",
+      "img": "https://images.pokemontcg.io/swsh9/151_hires.png",
       "attacks": [
         {
           "name": "Sombra Temível",
@@ -295,9 +295,9 @@
       ]
     },
     {
-      "id": "swsh12pt5gg-paras-pt-01",
+      "id": "swsh12pt5gg-32-paras-pt-01",
       "name": "Paras",
-      "number": "GG?/GG70",
+      "number": "GG32/GG70",
       "set": "Galeria Galar (Crown Zenith Galarian Gallery)",
       "set_code": "GG",
       "rarity": "rare",
@@ -305,11 +305,11 @@
       "hp": 70,
       "stage": "Básico",
       "lang": "pt",
-      "value_brl": 8,
+      "value_brl": 12,
       "quantity": 1,
       "variant": "Galarian Gallery",
-      "notes": "Número GG ilegível na foto — confirmar antes de usar URL.",
-      "img": "",
+      "notes": "",
+      "img": "https://images.pokemontcg.io/swsh12pt5gg/GG32_hires.png",
       "attacks": [
         {
           "name": "Absorção",
@@ -2484,6 +2484,312 @@
           "cost": "WWW",
           "damage": "200",
           "text": "Durante o próximo turno do oponente, este Pokémon recebe 30 de dano a menos de ataques (depois de aplicar Fraqueza e Resistência)."
+        }
+      ]
+    },
+    {
+      "id": "smp-sm33-tapu-koko-gx-pt-01",
+      "name": "Tapu Koko GX",
+      "number": "SM33",
+      "set": "Sun & Moon Black Star Promos",
+      "set_code": "SMP",
+      "rarity": "ultra",
+      "type": "Elétrico",
+      "hp": 170,
+      "stage": "Básico",
+      "lang": "pt",
+      "value_brl": 60,
+      "quantity": 1,
+      "variant": "Promo",
+      "notes": "Habilidade Trilha Aérea.",
+      "img": "https://images.pokemontcg.io/smp/SM33_hires.png",
+      "attacks": [
+        {
+          "name": "Garras Elevadas",
+          "cost": "LCC",
+          "damage": "130",
+          "text": ""
+        },
+        {
+          "name": "Trovão Tapu GX",
+          "cost": "LCC",
+          "damage": "50x",
+          "text": "Este ataque causa 50 pontos de dano vezes a quantidade de Energia ligada a todos os Pokémon do seu oponente."
+        }
+      ]
+    },
+    {
+      "id": "sm10-54-raichu-tag-team-pt-01",
+      "name": "Raichu e Raichu de Alola GX (TAG TEAM)",
+      "number": "54/236",
+      "set": "Aliados Inquebráveis (Unbroken Bonds)",
+      "set_code": "UNB",
+      "rarity": "ultra",
+      "type": "Elétrico",
+      "hp": 260,
+      "stage": "Básico",
+      "lang": "pt",
+      "value_brl": 50,
+      "quantity": 1,
+      "variant": "TAG TEAM (Aliados)",
+      "notes": "TAG TEAM Pokémon.",
+      "img": "https://images.pokemontcg.io/sm10/54_hires.png",
+      "attacks": [
+        {
+          "name": "Choque em Parelha",
+          "cost": "LLC",
+          "damage": "80+",
+          "text": "Se este Pokémon estava no Banco e se tornou o seu Pokémon Ativo nesta rodada, este ataque causará 80 pontos de dano a mais e o Pokémon Ativo do seu oponente será Paralisado."
+        },
+        {
+          "name": "Surfar no Relâmpago GX",
+          "cost": "LLLL",
+          "damage": "150+",
+          "text": "Troque este Pokémon por 1 dos seus Pokémon no Banco. Se este Pokémon tiver pelo menos 2 Energias adicionais ligadas a ele, este ataque causará 100 pontos de dano a mais."
+        }
+      ]
+    },
+    {
+      "id": "xyp-xy156-mbeedrill-ex-pt-01",
+      "name": "M Beedrill EX",
+      "number": "XY156",
+      "set": "XY Black Star Promos",
+      "set_code": "XYP",
+      "rarity": "ultra",
+      "type": "Grama",
+      "hp": 200,
+      "stage": "Mega Evolução",
+      "evolves_from": "Beedrill EX",
+      "lang": "pt",
+      "value_brl": 40,
+      "quantity": 1,
+      "variant": "Promo",
+      "notes": "Mega Evolução promo.",
+      "img": "https://images.pokemontcg.io/xyp/XY156_hires.png",
+      "attacks": [
+        {
+          "name": "Ferrão Perigoso",
+          "cost": "GG",
+          "damage": "40",
+          "text": "Descarte toda a Energia ligada a este Pokémon. O Pokémon Ativo do seu oponente agora está Paralisado e Envenenado. Coloque 4 contadores de dano em vez de 1 naquele Pokémon entre as vezes de jogar."
+        }
+      ]
+    },
+    {
+      "id": "fst-73-greninja-v-pt-01",
+      "name": "Greninja V",
+      "number": "073/264",
+      "set": "Estilo de Fusão (Fusion Strike)",
+      "set_code": "FST",
+      "rarity": "ultra",
+      "type": "Água",
+      "hp": 210,
+      "stage": "Básico",
+      "lang": "pt",
+      "value_brl": 30,
+      "quantity": 1,
+      "variant": "Padrão",
+      "notes": "",
+      "img": "https://images.pokemontcg.io/swsh8/73_hires.png",
+      "attacks": [
+        {
+          "name": "Gotejo",
+          "cost": "WC",
+          "damage": "40",
+          "text": ""
+        },
+        {
+          "name": "Estrela Ninja Dançante",
+          "cost": "WCC",
+          "damage": "80x",
+          "text": "Jogue 3 moedas. Este ataque causa 80 pontos de dano para cada cara."
+        }
+      ]
+    },
+    {
+      "id": "pgo-30-mewtwo-v-pt-01",
+      "name": "Mewtwo V",
+      "number": "030/078",
+      "set": "Pokémon GO",
+      "set_code": "PGO",
+      "rarity": "ultra",
+      "type": "Psíquico",
+      "hp": 220,
+      "stage": "Básico",
+      "lang": "pt",
+      "value_brl": 35,
+      "quantity": 1,
+      "variant": "Padrão",
+      "notes": "",
+      "img": "https://images.pokemontcg.io/pgo/30_hires.png",
+      "attacks": [
+        {
+          "name": "Super-raio Psíquico",
+          "cost": "PC",
+          "damage": "50",
+          "text": ""
+        },
+        {
+          "name": "Transferência Intensa",
+          "cost": "PPC",
+          "damage": "160",
+          "text": "Mova 1 Energia deste Pokémon para 1 dos seus Pokémon no Banco."
+        }
+      ]
+    },
+    {
+      "id": "swsh5-87-urshifu-fluido-v-regular-pt-01",
+      "name": "Urshifu Golpe Fluido V",
+      "number": "087/163",
+      "set": "Estilos de Batalha (Battle Styles)",
+      "set_code": "BST",
+      "rarity": "ultra",
+      "type": "Lutador",
+      "hp": 220,
+      "stage": "Básico",
+      "lang": "pt",
+      "value_brl": 22,
+      "quantity": 1,
+      "variant": "Padrão (regular)",
+      "notes": "Versão regular (não-alt-art) — diferente da carta 086/163 que é alt art.",
+      "img": "https://images.pokemontcg.io/swsh5/87_hires.png",
+      "attacks": [
+        {
+          "name": "Bombardear",
+          "cost": "F",
+          "damage": "30",
+          "text": "Você pode trocar este Pokémon por 1 dos seus Pokémon no Banco."
+        },
+        {
+          "name": "Centenas de Golpes Furiosos",
+          "cost": "FFC",
+          "damage": "150",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "id": "cel25-16-zacian-v-pt-01",
+      "name": "Zacian V",
+      "number": "016/025",
+      "set": "Celebrações 25 anos",
+      "set_code": "CEL25",
+      "rarity": "ultra",
+      "type": "Metálico",
+      "hp": 220,
+      "stage": "Básico",
+      "lang": "pt",
+      "value_brl": 35,
+      "quantity": 1,
+      "variant": "Padrão",
+      "notes": "Habilidade Rugido da Espada.",
+      "img": "https://images.pokemontcg.io/cel25/16_hires.png",
+      "attacks": [
+        {
+          "name": "Talho Tempestuoso",
+          "cost": "MMC",
+          "damage": "60+",
+          "text": "Este ataque causa 30 pontos de dano a mais para cada Energia M ligada a este Pokémon."
+        }
+      ]
+    },
+    {
+      "id": "swsh7-214-umbreon-vmax-pt-01",
+      "name": "Umbreon VMAX (Golpe Decisivo)",
+      "number": "214/203",
+      "set": "Céus Soberanos (Evolving Skies)",
+      "set_code": "EVS",
+      "rarity": "ultra",
+      "type": "Sombrio",
+      "hp": 310,
+      "stage": "Mega Evolução",
+      "evolves_from": "Umbreon V",
+      "lang": "pt",
+      "value_brl": 250,
+      "quantity": 1,
+      "variant": "Rainbow/Secret Rare",
+      "notes": "Uma das cartas mais valorizadas do TCG moderno. Habilidade Sinal Sombrio.",
+      "img": "https://images.pokemontcg.io/swsh7/214_hires.png",
+      "attacks": [
+        {
+          "name": "Escuridão Max",
+          "cost": "DDC",
+          "damage": "160",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "id": "ssp-186-chave-embaralhamento-pt-01",
+      "name": "Chave de Embaralhamento (Reset Stamp)",
+      "number": "186/191",
+      "set": "Faíscas Volantes (Surging Sparks)",
+      "set_code": "SSP",
+      "rarity": "rare",
+      "type": "Normal",
+      "lang": "pt",
+      "value_brl": 25,
+      "quantity": 1,
+      "variant": "ACE SPEC",
+      "notes": "Item Treinador ACE SPEC.",
+      "img": "https://images.pokemontcg.io/sv8/186_hires.png",
+      "attacks": []
+    },
+    {
+      "id": "swsh6-75-calyrex-vmax-pt-01",
+      "name": "Calyrex Cavaleiro Espectral VMAX",
+      "number": "075/198",
+      "set": "Reinado Calafrio (Chilling Reign)",
+      "set_code": "CRE",
+      "rarity": "ultra",
+      "type": "Psíquico",
+      "hp": 320,
+      "stage": "Mega Evolução",
+      "evolves_from": "Calyrex Cavaleiro Espectral V",
+      "lang": "pt",
+      "value_brl": 70,
+      "quantity": 1,
+      "variant": "Padrão",
+      "notes": "Habilidade Portão do Submundo.",
+      "img": "https://images.pokemontcg.io/swsh6/75_hires.png",
+      "attacks": [
+        {
+          "name": "Assombração Max",
+          "cost": "PPC",
+          "damage": "10+",
+          "text": "Este ataque causa 30 pontos de dano a mais para cada Energia P ligada a todos os seus Pokémon."
+        }
+      ]
+    },
+    {
+      "id": "shf-73-alcremie-vmax-pt-01",
+      "name": "Alcremie VMAX",
+      "number": "073/072",
+      "set": "Destinos Brilhantes (Shining Fates)",
+      "set_code": "SHF",
+      "rarity": "ultra",
+      "type": "Psíquico",
+      "hp": 310,
+      "stage": "Mega Evolução",
+      "evolves_from": "Alcremie V",
+      "lang": "pt",
+      "value_brl": 30,
+      "quantity": 1,
+      "variant": "Padrão",
+      "notes": "Set 072 cards = Shining Fates (provável). Confirmar.",
+      "img": "https://images.pokemontcg.io/swsh45/73_hires.png",
+      "attacks": [
+        {
+          "name": "Decoração",
+          "cost": "C",
+          "damage": "",
+          "text": "Para cada um dos seus Pokémon no Banco, procure por 1 carta de Energia no seu baralho e ligue-a àquele Pokémon. Em seguida, embaralhe o seu baralho."
+        },
+        {
+          "name": "Batedeira G-Max",
+          "cost": "PCC",
+          "damage": "60x",
+          "text": "Descarte qualquer quantidade de Energia dos seus Pokémon. Este ataque causa 60 pontos de dano para cada carta descartada desta forma."
         }
       ]
     }
