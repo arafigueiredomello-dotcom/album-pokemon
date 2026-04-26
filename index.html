@@ -227,6 +227,7 @@ body{
   <div class="header-meta">
     <div id="total-cards">—</div>
     <div id="last-update">—</div>
+    <button id="btn-export" onclick="exportJSON()" style="margin-top:10px;background:var(--accent);color:#0a0e1a;border:none;padding:8px 14px;border-radius:6px;font-weight:600;cursor:pointer;font-family:inherit;font-size:13px">⬇ Exportar JSON</button>
   </div>
 </header>
 
@@ -477,6 +478,7 @@ function openModal(id){
     ${rows.map(([l,v]) => `<div class="modal-row"><span class="modal-row-lbl">${l}</span><span class="modal-row-val">${v}</span></div>`).join('')}
     ${c.notes ? `<div style="margin-top:16px;padding:12px 14px;background:var(--bg-elevated);border-radius:8px;font-size:13px;font-style:italic;color:var(--text-mute)">${c.notes}</div>` : ''}
     ${attacksHtml}
+    <button onclick='deleteCard(${JSON.stringify(c.id)})' style="margin-top:20px;width:100%;background:var(--accent-red);color:#fff;border:none;padding:10px 14px;border-radius:6px;font-weight:600;cursor:pointer;font-family:inherit;font-size:13px">🗑 Apagar do álbum</button>
   `;
 
   document.getElementById('modal').classList.add('open');
@@ -512,6 +514,45 @@ document.getElementById('modal').addEventListener('click', e => {
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeModal();
 });
+
+// === Apagar e Exportar ===
+function deleteCard(id){
+  const c = ALL.find(x => x.id === id);
+  if (!c) return;
+  const msg = (c.quantity && c.quantity > 1)
+    ? `Apagar uma cópia de "${c.name}"? (Você tem ${c.quantity} no total — vou diminuir pra ${c.quantity - 1})`
+    : `Apagar "${c.name}" do álbum?`;
+  if (!confirm(msg)) return;
+
+  if (c.quantity && c.quantity > 1) {
+    c.quantity = c.quantity - 1;
+  } else {
+    ALL = ALL.filter(x => x.id !== id);
+  }
+  closeModal();
+  populateSetFilter();
+  renderStats();
+  renderGrid();
+}
+
+function exportJSON(){
+  // Atualiza meta com a data de hoje e re-empacota
+  const today = new Date().toISOString().split('T')[0];
+  const out = {
+    meta: { ...META, last_updated: today, version: (META.version || 1) + 1 },
+    cards: ALL,
+    wishlist: []
+  };
+  const blob = new Blob([JSON.stringify(out, null, 2)], {type: 'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'cartas.json';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
 
 loadData();
 </script>
