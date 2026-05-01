@@ -211,6 +211,67 @@ body{
 .spinner{width:32px;height:32px;margin:0 auto 12px;position:relative;animation:spin 1s linear infinite}
 .spinner::before{content:"";position:absolute;inset:0;border-radius:50%;background:linear-gradient(to bottom,var(--accent-red) 50%,#fff 50%)}
 .spinner::after{content:"";position:absolute;top:50%;left:50%;width:10px;height:10px;border-radius:50%;background:#0a0e1a;border:2px solid #0a0e1a;transform:translate(-50%,-50%);box-shadow:inset 0 0 0 2px #fff,0 0 0 2px #fff}
+
+/* Deck Builder */
+.deck-picker{display:flex;gap:6px;margin-bottom:20px;background:var(--bg-card);padding:5px;border-radius:10px;border:1px solid var(--border);width:fit-content}
+.deck-tab{padding:9px 18px;font-size:13px;font-weight:600;color:var(--text-mute);background:transparent;border:none;border-radius:6px;cursor:pointer;font-family:inherit;transition:all 0.15s}
+.deck-tab:hover{color:var(--text)}
+.deck-tab.active{background:var(--bg-elevated);color:var(--text)}
+
+.deck-hero{
+  background:linear-gradient(135deg,var(--bg-card) 0%,var(--bg-card-2) 100%);
+  border:1px solid var(--border);border-radius:14px;padding:24px 28px;margin-bottom:24px;
+  position:relative;overflow:hidden;
+}
+.deck-hero::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--gradient);}
+.deck-hero h2{font-size:24px;font-weight:800;letter-spacing:-0.02em;margin-bottom:6px}
+.deck-hero .deck-tagline{color:var(--text-mute);font-size:14px;margin-bottom:18px;line-height:1.5}
+.deck-hero .deck-meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin-bottom:18px}
+.deck-hero .deck-meta-item{background:rgba(0,0,0,0.25);padding:11px 14px;border-radius:8px;border:1px solid var(--border)}
+.deck-hero .deck-meta-lbl{font-size:10px;color:var(--text-dim);letter-spacing:0.08em;text-transform:uppercase;font-weight:700;margin-bottom:4px}
+.deck-hero .deck-meta-val{font-size:15px;font-weight:700;color:var(--text)}
+.deck-hero .deck-strategy{background:rgba(255,203,5,0.08);border-left:3px solid var(--accent);padding:14px 16px;border-radius:6px;font-size:13px;color:var(--text);line-height:1.6}
+.deck-hero .deck-strategy strong{color:var(--accent);font-weight:700}
+
+.deck-section{margin-bottom:28px}
+.deck-section-head{display:flex;align-items:baseline;gap:12px;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+.deck-section-head h3{font-size:15px;font-weight:700;letter-spacing:-0.01em}
+.deck-section-head .count{font-size:12px;color:var(--text-mute);font-family:'JetBrains Mono',monospace;font-weight:600}
+
+.deck-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
+.deck-card{background:var(--bg-card);border:1px solid var(--border);border-radius:10px;overflow:hidden;cursor:pointer;transition:all 0.15s;position:relative}
+.deck-card:hover{transform:translateY(-2px);border-color:var(--border-hover);box-shadow:0 8px 24px rgba(0,0,0,0.3)}
+.deck-card-img{position:relative;aspect-ratio:245/342;background:var(--bg-elevated);overflow:hidden;display:flex;align-items:center;justify-content:center}
+.deck-card-img img{width:100%;height:100%;object-fit:cover}
+.deck-card-qty{
+  position:absolute;top:8px;right:8px;
+  background:var(--accent);color:#0a0e1a;
+  font-size:13px;font-weight:800;
+  padding:3px 9px;border-radius:14px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.4);
+  border:2px solid #0a0e1a;
+  min-width:32px;text-align:center;
+}
+.deck-card-info{padding:8px 11px 10px}
+.deck-card-info-name{font-size:12px;font-weight:700;line-height:1.2;margin-bottom:3px}
+.deck-card-info-meta{font-size:10px;color:var(--text-mute);font-family:'JetBrains Mono',monospace}
+
+.deck-keys{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:18px}
+.deck-key{background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:14px 16px}
+.deck-key-head{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.deck-key-head .icon{width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.deck-key-head h4{font-size:12px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:var(--text-mute)}
+.deck-key p{font-size:13px;line-height:1.5;color:var(--text)}
+
+.deck-types{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.deck-type-chip{font-size:11px;padding:3px 9px;border-radius:10px;background:var(--bg-elevated);color:var(--text);font-weight:600}
+
+@media(max-width:720px){
+  .deck-hero{padding:18px 16px}
+  .deck-hero h2{font-size:18px}
+  .deck-grid{grid-template-columns:repeat(auto-fill,minmax(135px,1fr));gap:10px}
+  .deck-card-info-name{font-size:11px}
+}
 </style>
 </head>
 <body>
@@ -275,10 +336,11 @@ body{
 </div>
 
 <div id="tab-deck" style="display:none">
-  <div class="empty">
-    <h3>Construtor de deck</h3>
-    <p>Quando tiver cartas suficientes, essa aba vai sugerir o melhor deck possível com o que vocês têm — priorizando sinergias de tipo, linhas evolutivas e combos óbvios.</p>
+  <div class="deck-picker">
+    <button class="deck-tab active" data-deck="0">Deck 1: Dragapult ex</button>
+    <button class="deck-tab" data-deck="1">Deck 2: Steven Stone</button>
   </div>
+  <div id="deck-content"></div>
 </div>
 
 <!-- Modal de detalhe -->
@@ -496,6 +558,7 @@ document.querySelectorAll('.tab').forEach(t => {
     ['album','faltam','deck'].forEach(n => {
       document.getElementById('tab-'+n).style.display = n === t.dataset.tab ? '' : 'none';
     });
+    if (t.dataset.tab === 'deck') renderDeck(CURRENT_DECK);
   });
 });
 
@@ -553,6 +616,221 @@ function exportJSON(){
   document.body.removeChild(a);
   URL.revokeObjectURL(url);
 }
+
+// === DECK BUILDER ===
+const DECKS = [
+  {
+    name: 'Dragapult ex — Phantom Dive',
+    tagline: 'O deck mais forte da meta atual: 320 HP de Dragapult ex e o ataque Phantom Dive (200 dano + 6 contadores no banco do oponente). Combina perfeitamente com Munkidori (move dano) e Fezandipiti (compra cartas quando você é nocauteado).',
+    archetype: 'Dragão · Espalhamento de Dano',
+    color: 'linear-gradient(135deg,#8e2de2 0%,#4a00e0 100%)',
+    plays_per_game: '~2 turnos pra montar Dragapult, depois 1 KO por turno',
+    win_condition: 'Phantom Dive: nocauteia o ativo (200 dano) e enfraquece 1-2 do banco com 6 contadores. Munkidori move os contadores pra finalizar quem você quer.',
+    keys: [
+      { title: 'Velocidade', text: 'Doce Raro pula o Estágio 1: Dreepy → Dragapult ex em 1 turno.' },
+      { title: 'Energia barata', text: 'Phantom Dive custa só 1 Psíquica + 2 Incolores — qualquer energia preenche.' },
+      { title: 'Munkidori ex', text: 'Habilidade Adrenal Cerebral move 3 contadores de dano dos seus pra inimigos por turno — fecha KOs impossíveis.' },
+      { title: 'Fezandipiti ex', text: 'Sair do Roteiro: quando seu ex é nocauteado, compra 3 cartas. Vira a partida quando perde Dragapult.' },
+    ],
+    list: [
+      // Pokémon (14)
+      { id: 'twm-128-dreepy-pt-01', qty: 4 },
+      { id: 'twm-129-drakloak-pt-01', qty: 4 },
+      { id: 'twm-130-dragapult-ex-pt-01', qty: 4 },
+      { id: 'sfa-37-munkidori-pt-01', qty: 1 },
+      { id: 'sfa-038-fezandipiti-ex-pt-01', qty: 1 },
+      // Treinadores (35)
+      { id: 'svi-196-ultra-bola-pt-01', qty: 4 },
+      { id: 'tef-144-poffin-de-colega-pt-01', qty: 4 },
+      { id: 'svi-191-doce-raro-pt-01', qty: 4 },
+      { id: 'svi-190-pesquisa-professores-turo-pt-01', qty: 3 },
+      { id: 'svi-166-arven-pt-01', qty: 3 },
+      { id: 'pal-172-ordem-da-chefia-pt-01', qty: 3 },
+      { id: 'meg-119-determinacao-da-lilian-pt-01', qty: 3 },
+      { id: 'svi-194-substituicao-pt-01', qty: 2 },
+      { id: 'paf-084-bola-de-ninho-pt-01', qty: 2 },
+      { id: 'sfa-061-maca-noturna-pt-01', qty: 2 },
+      { id: 'tef-159-skate-de-resgate-pt-01', qty: 2 },
+      { id: 'meg-122-jardim-misterioso-pt-01', qty: 2 },
+      { id: 'blk-079-balao-de-ar-pt-01', qty: 1 },
+      // Energias (11)
+      { id: 'mee-005-energia-psiquica-pt-01', qty: 11 },
+    ]
+  },
+  {
+    name: 'Orgulho do Steven — Metagross ex',
+    tagline: 'Time tribal do Steven Stone: Metagross ex (340 HP) com Caverna de Granito reduzindo 30 de dano de TODOS os ataques inimigos. Skarmory e Claydol seguram o flanco enquanto você monta o tanque.',
+    archetype: 'Metálico · Tribal Steven',
+    color: 'linear-gradient(135deg,#7b7b7b 0%,#c9c9c9 100%)',
+    plays_per_game: '2-3 turnos pra montar Metagross, depois praticamente intocável',
+    win_condition: 'Metagross ex Soco Cometa (280 dano) com Caverna de Granito ativa: efetivamente 280 - 30 = 250 dano contra você. Você fica com 340 HP - 30 = 370 efetivo.',
+    keys: [
+      { title: 'Caverna de Granito', text: 'TODOS os Pokémon do Steven recebem -30 dano de ataques inimigos. Stadium permanente, vale a pena 2 cópias.' },
+      { title: 'Doce Raro + Beldum', text: 'Beldum (70HP) → Metagross ex (340HP) num só turno pulando Metang.' },
+      { title: 'Claydol do Steven', text: 'Estágio 1 utilitário: ajuda a estabilizar o early game e ainda é Steven (caverna protege).' },
+      { title: 'Skarmory parede', text: '120 HP de bloqueio com Asa Cortante. Caverna deixa ele com 150 efetivo — segura ataques fracos enquanto Metagross sobe.' },
+    ],
+    list: [
+      // Pokémon (16)
+      { id: 'dri-143-beldum-do-steven-pt-01', qty: 3 },
+      { id: 'svp-207-beldum-do-steven-promo-pt-01', qty: 1 },
+      { id: 'dri-144-metang-do-steven-pt-01', qty: 3 },
+      { id: 'dri-145-metagross-ex-do-steven-pt-01', qty: 2 },
+      { id: 'dri-142-skarmory-do-steven-pt-01', qty: 2 },
+      { id: 'dri-083-baltoy-do-steven-pt-01', qty: 2 },
+      { id: 'dri-084-claydol-do-steven-pt-01', qty: 2 },
+      { id: 'dri-086-carbink-do-steven-pt-01', qty: 1 },
+      // Treinadores (32)
+      { id: 'svi-196-ultra-bola-pt-01', qty: 4 },
+      { id: 'svi-191-doce-raro-pt-01', qty: 1 },
+      { id: 'paf-089-doce-raro-pt-01', qty: 1 },
+      { id: 'paf-084-bola-de-ninho-pt-01', qty: 3 },
+      { id: 'tef-144-poffin-de-colega-pt-01', qty: 3 },
+      { id: 'svi-166-arven-pt-01', qty: 3 },
+      { id: 'svi-190-pesquisa-professores-turo-pt-01', qty: 4 },
+      { id: 'pal-172-ordem-da-chefia-pt-01', qty: 2 },
+      { id: 'meg-119-determinacao-da-lilian-pt-01', qty: 3 },
+      { id: 'dri-166-caverna-de-granito-pt-01', qty: 2 },
+      { id: 'svi-194-substituicao-pt-01', qty: 2 },
+      { id: 'pfl-094-fragmento-encantado-pt-01', qty: 2 },
+      { id: 'tef-159-skate-de-resgate-pt-01', qty: 1 },
+      { id: 'sfa-061-maca-noturna-pt-01', qty: 1 },
+      // Energias (12)
+      { id: 'sve-016-energia-metalica-pt-01', qty: 8 },
+      { id: 'mee-005-energia-psiquica-pt-01', qty: 4 },
+    ]
+  }
+];
+
+let CURRENT_DECK = 0;
+
+function categoryOf(c){
+  const t = (c.type || '').toLowerCase();
+  if (t.includes('treinador')) return 'Treinador';
+  if (t.includes('energia') || t.includes('energy')) return 'Energia';
+  return 'Pokémon';
+}
+
+function deckCardHtml(c, qty){
+  const imgHtml = c.img && c.img.length > 0
+    ? `<img src="${c.img}" alt="${c.name}" loading="lazy" onerror="this.outerHTML = placeholderHtml(${JSON.stringify(JSON.stringify(c))})" />`
+    : placeholderHtml(JSON.stringify(c));
+  return `<div class="deck-card" onclick='openModal(${JSON.stringify(c.id)})'>
+    <div class="deck-card-img">
+      ${imgHtml}
+      <div class="deck-card-qty">×${qty}</div>
+    </div>
+    <div class="deck-card-info">
+      <div class="deck-card-info-name">${c.name}</div>
+      <div class="deck-card-info-meta">${c.number || ''} · ${c.set_code || ''}</div>
+    </div>
+  </div>`;
+}
+
+function renderDeck(idx){
+  CURRENT_DECK = idx;
+  const deck = DECKS[idx];
+  const root = document.getElementById('deck-content');
+
+  // Resolver cartas e validar
+  const items = [];
+  let missing = 0;
+  for (const it of deck.list){
+    const c = ALL.find(x => x.id === it.id);
+    if (c){
+      items.push({ card: c, qty: it.qty });
+    } else {
+      missing += it.qty;
+    }
+  }
+
+  // Categorizar
+  const buckets = { 'Pokémon': [], 'Treinador': [], 'Energia': [] };
+  let totalCards = 0;
+  for (const it of items){
+    buckets[categoryOf(it.card)].push(it);
+    totalCards += it.qty;
+  }
+  totalCards += missing;
+
+  // Tipos dos Pokémon
+  const types = {};
+  for (const it of buckets['Pokémon']){
+    const t = it.card.type || '?';
+    types[t] = (types[t]||0) + it.qty;
+  }
+  const typeChips = Object.entries(types).sort((a,b)=>b[1]-a[1])
+    .map(([t,n]) => `<span class="deck-type-chip">${t} ×${n}</span>`).join('');
+
+  // Energias somadas
+  const totalEnergy = buckets['Energia'].reduce((s,i)=>s+i.qty,0);
+
+  root.innerHTML = `
+    <div class="deck-hero" style="--gradient:${deck.color}">
+      <h2>${deck.name}</h2>
+      <p class="deck-tagline">${deck.tagline}</p>
+      <div class="deck-meta">
+        <div class="deck-meta-item">
+          <div class="deck-meta-lbl">Total</div>
+          <div class="deck-meta-val">${totalCards} / 60 cartas</div>
+        </div>
+        <div class="deck-meta-item">
+          <div class="deck-meta-lbl">Arquétipo</div>
+          <div class="deck-meta-val">${deck.archetype}</div>
+        </div>
+        <div class="deck-meta-item">
+          <div class="deck-meta-lbl">Pokémon / Treinador / Energia</div>
+          <div class="deck-meta-val">${buckets['Pokémon'].reduce((s,i)=>s+i.qty,0)} · ${buckets['Treinador'].reduce((s,i)=>s+i.qty,0)} · ${totalEnergy}</div>
+        </div>
+        <div class="deck-meta-item">
+          <div class="deck-meta-lbl">Setup</div>
+          <div class="deck-meta-val">${deck.plays_per_game}</div>
+        </div>
+      </div>
+      <div class="deck-strategy">
+        <strong>Win condition:</strong> ${deck.win_condition}
+      </div>
+      <div class="deck-types" style="margin-top:14px">${typeChips}</div>
+    </div>
+
+    <div class="deck-keys">
+      ${deck.keys.map(k => `
+        <div class="deck-key">
+          <div class="deck-key-head"><div class="icon"></div><h4>${k.title}</h4></div>
+          <p>${k.text}</p>
+        </div>
+      `).join('')}
+    </div>
+
+    ${['Pokémon','Treinador','Energia'].map(cat => {
+      const list = buckets[cat];
+      if (!list.length) return '';
+      const total = list.reduce((s,i)=>s+i.qty,0);
+      return `
+        <div class="deck-section">
+          <div class="deck-section-head">
+            <h3>${cat}</h3>
+            <span class="count">${total} cartas · ${list.length} únicas</span>
+          </div>
+          <div class="deck-grid">
+            ${list.map(it => deckCardHtml(it.card, it.qty)).join('')}
+          </div>
+        </div>
+      `;
+    }).join('')}
+
+    ${missing > 0 ? `<div class="empty"><p>⚠️ ${missing} carta(s) do deck não foram encontradas no álbum (IDs não bateram). Provavelmente o cartas.json mudou de versão — me avise pra atualizar.</p></div>` : ''}
+  `;
+}
+
+// Hook nos botões da picker do deck
+document.querySelectorAll('.deck-tab').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.deck-tab').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderDeck(parseInt(btn.dataset.deck, 10));
+  });
+});
 
 loadData();
 </script>
