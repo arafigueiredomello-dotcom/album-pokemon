@@ -3358,7 +3358,7 @@
       "quantity": 6,
       "variant": "Padrão (set Mega Evolution)",
       "notes": "Energia básica de tipo Lutador. Versão do set Mega Evolution Energias.",
-      "img": "https://images.pokemontcg.io/mee/6_hires.png",
+      "img": "img/energia-lutador-mee.jpg",
       "attacks": []
     },
     {
@@ -3377,7 +3377,7 @@
       "quantity": 6,
       "variant": "Padrão (set Mega Evolution)",
       "notes": "Energia básica de tipo Sombrio. Versão do set Mega Evolution Energias.",
-      "img": "https://images.pokemontcg.io/mee/7_hires.png",
+      "img": "img/energia-sombrio-mee.jpg",
       "attacks": []
     },
     {
@@ -3942,7 +3942,7 @@
       "quantity": 1,
       "variant": "Padrão",
       "notes": "",
-      "img": "https://images.pokemontcg.io/meg/72_hires.png",
+      "img": "img/makuhita.jpg",
       "attacks": [
         {
           "name": "Soco Saca-rolha",
@@ -3974,7 +3974,7 @@
       "quantity": 1,
       "variant": "Holo",
       "notes": "Habilidade Pegador Mestre: uma vez por turno, ao jogar este Pokémon da mão para evoluir 1 dos seus Pokémon, mande 1 dos Pokémon no Banco do oponente para o Campo Ativo.",
-      "img": "https://images.pokemontcg.io/meg/73_hires.png",
+      "img": "img/hariyama.jpg",
       "attacks": [
         {
           "name": "Apertão Selvagem",
@@ -4000,7 +4000,7 @@
       "quantity": 1,
       "variant": "Padrão",
       "notes": "",
-      "img": "https://images.pokemontcg.io/meg/76_hires.png",
+      "img": "img/riolu.jpg",
       "attacks": [
         {
           "name": "Estocada Aceleratória",
@@ -4140,7 +4140,7 @@
       "quantity": 1,
       "variant": "Holo",
       "notes": "Procure por um Pokémon Básico, um Pokémon Estágio 1 e um Pokémon Estágio 2 no seu baralho, revele-os e coloque-os na sua mão.",
-      "img": "https://images.pokemontcg.io/pfl/87_hires.png",
+      "img": "img/dawn.jpg",
       "attacks": []
     },
     {
@@ -4216,7 +4216,7 @@
       "quantity": 1,
       "variant": "Padrão",
       "notes": "Durante este turno, os ataques usados pelos seus Pokémon Mega Evolução causarão 30 pontos de dano a mais ao Pokémon Ativo do oponente (antes de aplicar Fraqueza e Resistência).",
-      "img": "https://images.pokemontcg.io/meg/124_hires.png",
+      "img": "img/suplemento-premium-pro.jpg",
       "attacks": []
     },
     {
@@ -4311,7 +4311,7 @@
       "quantity": 1,
       "variant": "Padrão",
       "notes": "Sempre que algum jogador colocar um Pokémon Básico que não seja de tipo Sombrio no próprio Banco durante o próprio turno, coloque 2 contadores de dano naquele Pokémon.",
-      "img": "https://images.pokemontcg.io/meg/127_hires.png",
+      "img": "img/ruinas-arriscadas.jpg",
       "attacks": []
     },
     {
@@ -4356,7 +4356,7 @@
       "quantity": 1,
       "variant": "Promo",
       "notes": "Mega Evolução de Lucario. Carta promocional do set Mega Evolution.",
-      "img": "https://images.pokemontcg.io/mep/12_hires.png",
+      "img": "img/mega-lucario-ex.jpg",
       "attacks": [
         {
           "name": "Soco Aura",
@@ -4772,7 +4772,7 @@
       "quantity": 14,
       "variant": "Padrão (set Mega Evolution)",
       "notes": "Energia básica de tipo Psíquico. Versão do set Mega Evolution Energias.",
-      "img": "https://images.pokemontcg.io/mee/5_hires.png",
+      "img": "img/energia-psiquica-mee.jpg",
       "attacks": []
     },
     {
@@ -4791,7 +4791,7 @@
       "quantity": 2,
       "variant": "Holo Mega Evolução ex",
       "notes": "Habilidade Camada Diamantina: este Pokémon recebe 30 pontos de dano a menos de ataques (depois de aplicar Fraqueza e Resistência). Quando o Pokémon ex é Nocauteado, oponente pega 3 cartas de Prêmio.",
-      "img": "https://images.pokemontcg.io/pfl/41_hires.png",
+      "img": "img/mega-diancie-ex.jpg",
       "attacks": [
         {
           "name": "Feixe Grinalda",
@@ -4843,7 +4843,7 @@
       "quantity": 1,
       "variant": "Holo",
       "notes": "",
-      "img": "https://images.pokemontcg.io/pfl/39_hires.png",
+      "img": "img/cresselia.jpg",
       "attacks": [
         {
           "name": "Claridade Crescente",
@@ -4875,7 +4875,7 @@
       "quantity": 1,
       "variant": "Padrão",
       "notes": "",
-      "img": "https://images.pokemontcg.io/pfl/40_hires.png",
+      "img": "img/meloetta-pfl.jpg",
       "attacks": [
         {
           "name": "Melodia Salutífera",
@@ -4907,7 +4907,7 @@
       "quantity": 2,
       "variant": "Padrão",
       "notes": "",
-      "img": "https://images.pokemontcg.io/pfl/42_hires.png",
+      "img": "img/mimikyu.jpg",
       "attacks": [
         {
           "name": "Chamar a Família",
@@ -4939,7 +4939,7 @@
       "quantity": 2,
       "variant": "Padrão",
       "notes": "",
-      "img": "https://images.pokemontcg.io/pfl/43_hires.png",
+      "img": "img/milcery.jpg",
       "attacks": [
         {
           "name": "Beijo Drenante",
@@ -4965,7 +4965,7 @@
       "quantity": 1,
       "variant": "Padrão",
       "notes": "",
-      "img": "https://images.pokemontcg.io/pfl/44_hires.png",
+      "img": "img/alcremie.jpg",
       "attacks": [
         {
           "name": "Ciranda Açucarada",
@@ -4991,7 +4991,7 @@
       "quantity": 1,
       "variant": "Holo",
       "notes": "",
-      "img": "https://images.pokemontcg.io/pfl/45_hires.png",
+      "img": "img/zacian.jpg",
       "attacks": [
         {
           "name": "Limite Intenso",
@@ -5017,7 +5017,7 @@
       "quantity": 2,
       "variant": "Padrão",
       "notes": "",
-      "img": "https://images.pokemontcg.io/meg/62_hires.png",
+      "img": "img/spoink.jpg",
       "attacks": [
         {
           "name": "Giro Triplo",
@@ -5043,7 +5043,7 @@
       "quantity": 2,
       "variant": "Padrão",
       "notes": "Habilidade Passos Energizados: ao jogar este Pokémon da mão para evoluir, olhe as 4 cartas de cima do baralho e ligue qualquer número de Energias Básicas encontradas aos seus Pokémon. Embaralhe o resto.",
-      "img": "https://images.pokemontcg.io/meg/63_hires.png",
+      "img": "img/grumpig.jpg",
       "attacks": [
         {
           "name": "Esfera Psíquica",
@@ -5069,7 +5069,7 @@
       "quantity": 1,
       "variant": "Promo Full Art",
       "notes": "Versão promocional com arte alternativa. Mesmos ataques da PFL 040/094.",
-      "img": "https://images.pokemontcg.io/mep/26_hires.png",
+      "img": "img/meloetta-promo.jpg",
       "attacks": [
         {
           "name": "Melodia Salutífera",
@@ -5120,7 +5120,7 @@
       "quantity": 2,
       "variant": "Reprint Mega Evolution",
       "notes": "Mande 1 dos Pokémon no Banco do oponente para o Campo Ativo. Reprint da Ordem da Chefia (PAL 172/193).",
-      "img": "https://images.pokemontcg.io/meg/114_hires.png",
+      "img": "img/ordem-da-chefia.jpg",
       "attacks": []
     },
     {
@@ -5139,7 +5139,7 @@
       "quantity": 4,
       "variant": "Padrão",
       "notes": "Embaralhe a sua mão no baralho. Em seguida, compre 6 cartas. Se você tiver exatamente 6 cartas de Prêmio restantes, compre 8 cartas em vez de 6.",
-      "img": "https://images.pokemontcg.io/meg/119_hires.png",
+      "img": "img/determinacao-lilian.jpg",
       "attacks": []
     },
     {
@@ -5177,7 +5177,7 @@
       "quantity": 1,
       "variant": "Profª Juniper",
       "notes": "Descarte a sua mão e compre 7 cartas. Versão Profª Juniper (terceira versão da carta no JSON, junto com Prof. Carvalho CEL25C e Prof. Turo SVI).",
-      "img": "https://images.pokemontcg.io/blk/85_hires.png",
+      "img": "img/pesquisa-juniper.jpg",
       "attacks": []
     },
     {
@@ -5196,7 +5196,7 @@
       "quantity": 1,
       "variant": "Holo",
       "notes": "Cure todo o dano de 1 dos seus Pokémon ex de Megaevolução. Se você curou qualquer dano desta forma, coloque todas as Energias ligadas àquele Pokémon na sua mão.",
-      "img": "https://images.pokemontcg.io/meg/132_hires.png",
+      "img": "img/compaixao-do-wally.jpg",
       "attacks": []
     },
     {
@@ -5253,7 +5253,7 @@
       "quantity": 2,
       "variant": "Reprint Mega Evolution",
       "notes": "Descarte 2 cartas da mão para procurar 1 Pokémon no baralho. Reprint da Ultra Bola (SVI 196/198) com arte do set Mega Evolution.",
-      "img": "https://images.pokemontcg.io/meg/131_hires.png",
+      "img": "img/ultra-bola.jpg",
       "attacks": []
     },
     {
@@ -5272,7 +5272,7 @@
       "quantity": 2,
       "variant": "Reprint Mega Evolution",
       "notes": "Troque o Pokémon Ativo por 1 dos Pokémon no Banco. Reprint da Substituição (SVI 194/198).",
-      "img": "https://images.pokemontcg.io/meg/130_hires.png",
+      "img": "img/substituicao.jpg",
       "attacks": []
     },
     {
@@ -5291,7 +5291,7 @@
       "quantity": 4,
       "variant": "Padrão",
       "notes": "Ligue uma carta de Energia Psíquica Básica da pilha de descarte a 1 dos seus Pokémon Psíquicos no Banco.",
-      "img": "https://images.pokemontcg.io/pfl/94_hires.png",
+      "img": "img/fragmento-encantado.jpg",
       "attacks": []
     },
     {
@@ -5310,7 +5310,7 @@
       "quantity": 2,
       "variant": "Padrão",
       "notes": "O custo de Recuo do Pokémon ao qual esta carta está ligada é 2 Energias Incolores a menos.",
-      "img": "https://images.pokemontcg.io/blk/79_hires.png",
+      "img": "img/balao-de-ar.jpg",
       "attacks": []
     },
     {
@@ -5329,7 +5329,7 @@
       "quantity": 2,
       "variant": "Padrão",
       "notes": "Uma vez durante o turno de cada jogador, aquele jogador poderá descartar uma carta de Energia da mão para comprar cartas até ter o mesmo número de cartas que os Pokémon Psíquicos em jogo.",
-      "img": "https://images.pokemontcg.io/meg/122_hires.png",
+      "img": "img/jardim-misterioso.jpg",
       "attacks": []
     }
   ],
