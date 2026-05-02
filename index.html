@@ -625,12 +625,12 @@ const DECKS = [
     archetype: 'Dragão · Espalhamento de Dano',
     color: 'linear-gradient(135deg,#8e2de2 0%,#4a00e0 100%)',
     plays_per_game: '~2 turnos pra montar Dragapult, depois 1 KO por turno',
-    win_condition: 'Mergulho Fantasma (custa 1 Fogo + 1 Psíquica): nocauteia o ativo (200 dano) e enfraquece 1-2 Pokémon do banco com 6 contadores. Munkidori ex move os contadores pra finalizar quem você quer.',
+    win_condition: 'Mergulho Fantasma (1 Fogo + 1 Psíquica): nocauteia o ativo (200 dano) e enfraquece 1-2 Pokémon do banco com 6 contadores. Munkidori ex e Fezandipiti ex são atacantes secundários quando a situação pedir.',
     keys: [
-      { title: 'Energia mista (Fogo + Psíquica)', text: 'Mergulho Fantasma custa 1 Energia Fogo + 1 Psíquica. Não dá pra trocar. O deck leva 4 Fogo + 5 Psíquica + 2 Sombria.' },
-      { title: 'Velocidade com Doce Raro', text: 'Doce Raro pula o Estágio 1: Dreepy → Dragapult ex direto, sem precisar passar por Drakloak. Você ataca já no turno 2.' },
-      { title: 'Munkidori ex (segunda linha)', text: 'Habilidade Adrenal Cerebral move até 3 contadores de dano dos seus pra inimigos por turno — fecha KOs impossíveis. Ataque Cabeçada Inescrupulosa: 190 dano (mas trava ela no próximo turno).' },
-      { title: 'Fezandipiti ex (utilidade dupla)', text: 'Habilidade Sair do Roteiro: quando seu ex é nocauteado, compra 3 cartas. Ataque Flecha Cruel (custa 2 Sombria + 1 qualquer): 100 de dano FOCADO em qualquer Pokémon — ignora fraqueza/resistência. Útil pra finalizar Pokémon de banco com pouco HP.' },
+      { title: 'Energia mista (Fogo + Psíquica + Sombria)', text: 'Mergulho Fantasma do Dragapult ex custa 1 Fogo + 1 Psíquica (não troca). Cabeçada Inescrupulosa do Munkidori custa 2 Sombrias + 1 qualquer. O deck leva 4 Fogo + 4 Psíquica + 3 Sombria.' },
+      { title: 'Velocidade com Doce Raro', text: 'Doce Raro pula o Estágio 1: Dreepy (Básico) → Dragapult ex direto, sem precisar passar por Drakloak. Você ataca já no turno 2.' },
+      { title: 'Munkidori ex (segundo atacante)', text: 'Cabeçada Inescrupulosa: 190 dano por 2 Sombrias + 1 qualquer. Mas trava ela no próximo turno. A habilidade dela (Nananinanão) só funciona com Pecharunt ex em jogo — você NÃO tem Pecharunt no álbum, então conta apenas com o ataque dela.' },
+      { title: 'Fezandipiti ex (utilidade dupla)', text: 'Habilidade Sair do Roteiro: quando QUALQUER Pokémon seu é nocauteado, compra 3 cartas (1 vez por turno). Ataque Flecha Cruel: 3 energias quaisquer → 100 dano focado em qualquer Pokémon do oponente, ignora fraqueza/resistência. Útil pra finalizar Pokémon de banco com pouco HP.' },
     ],
     list: [
       // Pokémon (14)
@@ -655,8 +655,8 @@ const DECKS = [
       { id: 'blk-079-balao-de-ar-pt-01', qty: 1 },
       // Energias (11) — Fogo + Psíquica + Sombria
       { id: 'sve-010-energia-fogo-pt-01', qty: 4 },
-      { id: 'mee-005-energia-psiquica-pt-01', qty: 5 },
-      { id: 'mee-007-energia-sombrio-pt-01', qty: 2 },
+      { id: 'mee-005-energia-psiquica-pt-01', qty: 4 },
+      { id: 'mee-007-energia-sombrio-pt-01', qty: 3 },
     ]
   },
   {
