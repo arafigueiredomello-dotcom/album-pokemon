@@ -620,17 +620,17 @@ function exportJSON(){
 // === DECK BUILDER ===
 const DECKS = [
   {
-    name: 'Dragapult ex — Phantom Dive',
-    tagline: 'O deck mais forte da meta atual: 320 HP de Dragapult ex e o ataque Phantom Dive (200 dano + 6 contadores no banco do oponente). Combina perfeitamente com Munkidori (move dano) e Fezandipiti (compra cartas quando você é nocauteado).',
+    name: 'Dragapult ex — Mergulho Fantasma',
+    tagline: 'Deck competitivo da meta atual. Dragapult ex tem 320 HP e o ataque Mergulho Fantasma causa 200 de dano no ativo do oponente E coloca 6 contadores (60 dano) espalhados no banco. Pressão dupla por turno.',
     archetype: 'Dragão · Espalhamento de Dano',
     color: 'linear-gradient(135deg,#8e2de2 0%,#4a00e0 100%)',
     plays_per_game: '~2 turnos pra montar Dragapult, depois 1 KO por turno',
-    win_condition: 'Phantom Dive: nocauteia o ativo (200 dano) e enfraquece 1-2 do banco com 6 contadores. Munkidori move os contadores pra finalizar quem você quer.',
+    win_condition: 'Mergulho Fantasma (custa 1 Fogo + 1 Psíquica): nocauteia o ativo (200 dano) e enfraquece 1-2 Pokémon do banco com 6 contadores. Munkidori ex move os contadores pra finalizar quem você quer.',
     keys: [
-      { title: 'Velocidade', text: 'Doce Raro pula o Estágio 1: Dreepy → Dragapult ex em 1 turno.' },
-      { title: 'Energia barata', text: 'Phantom Dive custa só 1 Psíquica + 2 Incolores — qualquer energia preenche.' },
-      { title: 'Munkidori ex', text: 'Habilidade Adrenal Cerebral move 3 contadores de dano dos seus pra inimigos por turno — fecha KOs impossíveis.' },
-      { title: 'Fezandipiti ex', text: 'Sair do Roteiro: quando seu ex é nocauteado, compra 3 cartas. Vira a partida quando perde Dragapult.' },
+      { title: 'Energia mista (Fogo + Psíquica)', text: 'Mergulho Fantasma custa 1 Energia Fogo + 1 Psíquica. Não dá pra trocar. O deck leva 4 Fogo + 5 Psíquica + 2 Sombria.' },
+      { title: 'Velocidade com Doce Raro', text: 'Doce Raro pula o Estágio 1: Dreepy → Dragapult ex direto, sem precisar passar por Drakloak. Você ataca já no turno 2.' },
+      { title: 'Munkidori ex (segunda linha)', text: 'Habilidade Adrenal Cerebral move até 3 contadores de dano dos seus pra inimigos por turno — fecha KOs impossíveis. Ataque Cabeçada Inescrupulosa: 190 dano (mas trava ela no próximo turno).' },
+      { title: 'Fezandipiti ex (utilidade dupla)', text: 'Habilidade Sair do Roteiro: quando seu ex é nocauteado, compra 3 cartas. Ataque Flecha Cruel (custa 2 Sombria + 1 qualquer): 100 de dano FOCADO em qualquer Pokémon — ignora fraqueza/resistência. Útil pra finalizar Pokémon de banco com pouco HP.' },
     ],
     list: [
       // Pokémon (14)
@@ -653,22 +653,24 @@ const DECKS = [
       { id: 'tef-159-skate-de-resgate-pt-01', qty: 2 },
       { id: 'meg-122-jardim-misterioso-pt-01', qty: 2 },
       { id: 'blk-079-balao-de-ar-pt-01', qty: 1 },
-      // Energias (11)
-      { id: 'mee-005-energia-psiquica-pt-01', qty: 11 },
+      // Energias (11) — Fogo + Psíquica + Sombria
+      { id: 'sve-010-energia-fogo-pt-01', qty: 4 },
+      { id: 'mee-005-energia-psiquica-pt-01', qty: 5 },
+      { id: 'mee-007-energia-sombrio-pt-01', qty: 2 },
     ]
   },
   {
     name: 'Orgulho do Steven — Metagross ex',
-    tagline: 'Time tribal do Steven Stone: Metagross ex (340 HP) com Caverna de Granito reduzindo 30 de dano de TODOS os ataques inimigos. Skarmory e Claydol seguram o flanco enquanto você monta o tanque.',
+    tagline: 'Deck tribal do Steven Stone. Metagross ex tem 340 HP e ataca com Pisada Metálica (200 dano por 3 Energias Metal). Caverna de Granito reduz 30 de dano que TODOS os Pokémon do Steven recebem — fica praticamente intocável.',
     archetype: 'Metálico · Tribal Steven',
     color: 'linear-gradient(135deg,#7b7b7b 0%,#c9c9c9 100%)',
     plays_per_game: '2-3 turnos pra montar Metagross, depois praticamente intocável',
-    win_condition: 'Metagross ex Soco Cometa (280 dano) com Caverna de Granito ativa: efetivamente 280 - 30 = 250 dano contra você. Você fica com 340 HP - 30 = 370 efetivo.',
+    win_condition: 'Metagross ex Pisada Metálica (200 dano por 3 Energias Metal). Com Caverna de Granito ativa, ele tem 340 HP + 30 redução = 370 HP efetivos contra ataques inimigos. Praticamente nenhum deck mata em 1 turno.',
     keys: [
-      { title: 'Caverna de Granito', text: 'TODOS os Pokémon do Steven recebem -30 dano de ataques inimigos. Stadium permanente, vale a pena 2 cópias.' },
-      { title: 'Doce Raro + Beldum', text: 'Beldum (70HP) → Metagross ex (340HP) num só turno pulando Metang.' },
-      { title: 'Claydol do Steven', text: 'Estágio 1 utilitário: ajuda a estabilizar o early game e ainda é Steven (caverna protege).' },
-      { title: 'Skarmory parede', text: '120 HP de bloqueio com Asa Cortante. Caverna deixa ele com 150 efetivo — segura ataques fracos enquanto Metagross sobe.' },
+      { title: 'Energia simples (Metal + Psíquica)', text: 'Pokémon Metálico (Beldum/Metang/Metagross/Skarmory) usam só Energia Metal. Pokémon Psíquico de suporte (Baltoy/Claydol/Carbink) usam só Energia Psíquica. Deck tem 8 Metal + 4 Psíquica.' },
+      { title: 'Caverna de Granito', text: 'Estádio que dá -30 de dano pra TODOS os Pokémon do Steven (seus e do oponente, mas ele não tem Steven). Carta-âncora — vale 2 cópias.' },
+      { title: 'Doce Raro + Beldum', text: 'Beldum (70HP) → Metagross ex (340HP) num só turno pulando Metang. Pisada Metálica precisa de 3 Metal acumulado, então só ataca com força no turno 3-4.' },
+      { title: 'Claydol como segunda ameaça', text: 'Explosão de Argila do Claydol custa 2 Psíquica + 1 qualquer e causa 220 de dano (descartando todas as energias dele). É a melhor opção quando Metagross está sem Caverna.' },
     ],
     list: [
       // Pokémon (16)
@@ -695,7 +697,7 @@ const DECKS = [
       { id: 'pfl-094-fragmento-encantado-pt-01', qty: 2 },
       { id: 'tef-159-skate-de-resgate-pt-01', qty: 1 },
       { id: 'sfa-061-maca-noturna-pt-01', qty: 1 },
-      // Energias (12)
+      // Energias (12) — Metal + Psíquica
       { id: 'sve-016-energia-metalica-pt-01', qty: 8 },
       { id: 'mee-005-energia-psiquica-pt-01', qty: 4 },
     ]
